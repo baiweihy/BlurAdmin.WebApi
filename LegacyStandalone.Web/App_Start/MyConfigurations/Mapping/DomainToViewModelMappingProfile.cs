@@ -15,6 +15,7 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
         {
             CreateMap<ApplicationUser, UserViewModel>();
             CreateMap<IdentityRole, RoleViewModel>();
+            CreateMap<IdentityUserRole, RoleViewModel>();
 
             CreateMap<UploadedFile, UploadedFileViewModel>();
         }

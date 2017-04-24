@@ -241,6 +241,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\Administration\AccountController.cs" />
     <Compile Include="Controllers\Administration\RoleController.cs" />
+    <Compile Include="Controllers\Administration\UserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -248,6 +249,10 @@
     <Compile Include="Migrations\201704230229565_AddPersonNameToApplicationUser.cs" />
     <Compile Include="Migrations\201704230229565_AddPersonNameToApplicationUser.Designer.cs">
       <DependentUpon>201704230229565_AddPersonNameToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704240614548_RemovePersonNameFromIdentityModel.cs" />
+    <Compile Include="Migrations\201704240614548_RemovePersonNameFromIdentityModel.Designer.cs">
+      <DependentUpon>201704240614548_RemovePersonNameFromIdentityModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -337,6 +342,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201704230229565_AddPersonNameToApplicationUser.resx">
       <DependentUpon>201704230229565_AddPersonNameToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704240614548_RemovePersonNameFromIdentityModel.resx">
+      <DependentUpon>201704240614548_RemovePersonNameFromIdentityModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
