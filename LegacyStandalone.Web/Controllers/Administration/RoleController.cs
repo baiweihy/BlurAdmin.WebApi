@@ -19,11 +19,11 @@ namespace LegacyStandalone.Web.Controllers.Administration
     [RoutePrefix("api/Role")]
     public class RoleController : ApiController
     {
-        private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly ApplicationUserManager _userManager;
+        private RoleManager<IdentityRole> _roleManager;
+        private ApplicationUserManager _userManager;
 
-        public RoleManager<IdentityRole> RoleManager => _roleManager ?? new RoleManager<IdentityRole>(new RoleStore<IdentityRole>());
-        public ApplicationUserManager UserManager => _userManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
+        public RoleManager<IdentityRole> RoleManager => _roleManager ?? (_roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>()));
+        public ApplicationUserManager UserManager => _userManager ?? (_userManager = Request.GetOwinContext().GetUserManager<ApplicationUserManager>());
 
         public RoleController()
         {
