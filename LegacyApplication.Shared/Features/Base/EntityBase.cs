@@ -8,7 +8,7 @@ namespace LegacyApplication.Shared.Features.Base
         public EntityBase(string userName = "匿名")
         {
             CreateTime = UpdateTime = DateTime.Now;
-            LastAction = "添加";
+            LastAction = "创建";
             CreateUser = UpdateUser = userName;
             Status = Status.正常;
         }
@@ -21,5 +21,7 @@ namespace LegacyApplication.Shared.Features.Base
         public string LastAction { get; set; }
         public Status Status { get; set; }
         public string StatusDisplay => Status.ToString();
+
+        public int Order { get; set; }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using System;
 using LegacyApplication.Shared.Enums;
+using LegacyApplication.Shared.Features.Order;
 
 namespace LegacyApplication.Shared.Features.Base
 {
-    public interface IEntityBase
+    public interface IEntityBase : IOrder
     {
         int Id { get; set; }
         DateTime CreateTime { get; set; }

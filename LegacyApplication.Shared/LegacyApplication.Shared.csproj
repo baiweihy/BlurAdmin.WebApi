@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\Order\IOrder.cs" />
     <Compile Include="Features\Tree\TreeEntityBase.cs" />
     <Compile Include="Configurations\AppSettings.cs" />
     <Compile Include="Features\Base\EntityBaseConfiguration.cs" />

@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201704270304482_AddDepartment.Designer.cs">
       <DependentUpon>201704270304482_AddDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704270815068_AddIOrder.cs" />
+    <Compile Include="Migrations\201704270815068_AddIOrder.Designer.cs">
+      <DependentUpon>201704270815068_AddIOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -83,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704270304482_AddDepartment.resx">
       <DependentUpon>201704270304482_AddDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704270815068_AddIOrder.resx">
+      <DependentUpon>201704270815068_AddIOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

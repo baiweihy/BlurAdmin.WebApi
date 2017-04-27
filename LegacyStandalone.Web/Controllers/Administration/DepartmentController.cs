@@ -91,6 +91,7 @@ namespace LegacyStandalone.Web.Controllers.Administration
                 }
             }
             model.Name = viewModel.Name;
+            model.Order = viewModel.Order;
             model.IsAbstract = viewModel.IsAbstract;
             model.UpdateUser = User.Identity.Name;
             model.UpdateTime = DateTime.Now;
