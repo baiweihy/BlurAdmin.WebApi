@@ -1,7 +1,7 @@
 ﻿using System;
 using LegacyApplication.Shared.Enums;
 
-namespace LegacyApplication.Base
+namespace LegacyApplication.Shared.Features.Base
 {
     public interface IEntityBase
     {

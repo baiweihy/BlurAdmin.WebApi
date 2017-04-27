@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyStandalone.Web", "LegacyStandalone.Web\LegacyStandalone.Web.csproj", "{1269F494-5C50-43B9-8A71-E732F965DF95}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyApplication.Base", "LegacyApplication.Base\LegacyApplication.Base.csproj", "{05C3523A-2D44-43D4-BAE5-30D37A4C178E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyApplication.Database", "LegacyApplication.Database\LegacyApplication.Database.csproj", "{2CC6C674-8AC2-473A-928E-9144BFA41342}"
 EndProject
@@ -27,10 +25,6 @@ Global
 		{1269F494-5C50-43B9-8A71-E732F965DF95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1269F494-5C50-43B9-8A71-E732F965DF95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1269F494-5C50-43B9-8A71-E732F965DF95}.Release|Any CPU.Build.0 = Release|Any CPU
-		{05C3523A-2D44-43D4-BAE5-30D37A4C178E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05C3523A-2D44-43D4-BAE5-30D37A4C178E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05C3523A-2D44-43D4-BAE5-30D37A4C178E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05C3523A-2D44-43D4-BAE5-30D37A4C178E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2CC6C674-8AC2-473A-928E-9144BFA41342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2CC6C674-8AC2-473A-928E-9144BFA41342}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CC6C674-8AC2-473A-928E-9144BFA41342}.Release|Any CPU.ActiveCfg = Release|Any CPU

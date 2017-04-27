@@ -1,15 +1,15 @@
 ﻿using System;
 using LegacyApplication.Shared.Enums;
 
-namespace LegacyApplication.Base
+namespace LegacyApplication.Shared.Features.Base
 {
     public class EntityBase : IEntityBase
     {
-        public EntityBase()
+        public EntityBase(string userName = "匿名")
         {
             CreateTime = UpdateTime = DateTime.Now;
             LastAction = "添加";
-            CreateUser = UpdateUser = "匿名";
+            CreateUser = UpdateUser = userName;
             Status = Status.正常;
         }
 

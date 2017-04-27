@@ -4,10 +4,8 @@ using Autofac;
 using Autofac.Integration.WebApi;
 using LegacyApplication.Database.Context;
 using LegacyApplication.Database.Infrastructure;
+using LegacyApplication.Repositories.Administration;
 using LegacyApplication.Repositories.Core;
-using LegacyStandalone.Web.Models;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace LegacyStandalone.Web.MyConfigurations
 {
@@ -32,13 +30,12 @@ namespace LegacyStandalone.Web.MyConfigurations
             //       .As<DbContext>()
             //       .InstancePerRequest();
 
-            builder.RegisterType<CoreContext>()
-                .As<IUnitOfWork>()
-                .InstancePerRequest();
+            builder.RegisterType<CoreContext>().As<IUnitOfWork>().InstancePerRequest();
             
-            builder.RegisterType<UploadedFileRepository>()
-                .As<IUploadedFileRepository>().InstancePerRequest();
-            
+            builder.RegisterType<UploadedFileRepository>().As<IUploadedFileRepository>().InstancePerRequest();
+
+            builder.RegisterType<DepartmentRepository>().As<IDepartmentRepository>().InstancePerRequest();
+
             Container = builder.Build();
 
             return Container;

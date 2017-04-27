@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using LegacyApplication.Base;
+using LegacyApplication.Shared.Features.Base;
 
 namespace LegacyApplication.Database.Infrastructure
 {
@@ -27,6 +27,8 @@ namespace LegacyApplication.Database.Infrastructure
         void DeleteWhere(Expression<Func<T, bool>> predicate);
         void AddRange(IEnumerable<T> entities);
         void DeleteRange(IEnumerable<T> entities);
+        void Attach(T entity);
+        void AttachRange(IEnumerable<T> entities);
         void Detach(T entity);
         void DetachRange(IEnumerable<T> entities);
         void ChangeStatus(T entity);

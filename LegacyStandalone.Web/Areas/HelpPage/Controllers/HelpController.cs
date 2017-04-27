@@ -1,14 +1,15 @@
 using System;
-using System.Web.Http;
-using System.Web.Mvc;
 using LegacyStandalone.Web.Areas.HelpPage.ModelDescriptions;
 using LegacyStandalone.Web.Areas.HelpPage.Models;
+using System.Web.Mvc;
+using System.Web.Http;
 
 namespace LegacyStandalone.Web.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.
     /// </summary>
+    [System.Web.Mvc.AllowAnonymous]
     public class HelpController : Controller
     {
         private const string ErrorViewName = "Error";
@@ -24,15 +25,27 @@ namespace LegacyStandalone.Web.Areas.HelpPage.Controllers
         }
 
         public HttpConfiguration Configuration { get; private set; }
-
+        
         public ActionResult Index()
         {
+            if (!HttpContext.Request.IsLocal)
+            {
+                Response.Status = "401.0 - Unauthorized";
+                Response.End();
+                return new HttpUnauthorizedResult("Unauthorized");
+            }
             ViewBag.DocumentationProvider = Configuration.Services.GetDocumentationProvider();
             return View(Configuration.Services.GetApiExplorer().ApiDescriptions);
         }
 
         public ActionResult Api(string apiId)
         {
+            if (!HttpContext.Request.IsLocal)
+            {
+                Response.Status = "401.0 - Unauthorized";
+                Response.End();
+                return new HttpUnauthorizedResult("Unauthorized");
+            }
             if (!String.IsNullOrEmpty(apiId))
             {
                 HelpPageApiModel apiModel = Configuration.GetHelpPageApiModel(apiId);
@@ -47,6 +60,12 @@ namespace LegacyStandalone.Web.Areas.HelpPage.Controllers
 
         public ActionResult ResourceModel(string modelName)
         {
+            if (!HttpContext.Request.IsLocal)
+            {
+                Response.Status = "401.0 - Unauthorized";
+                Response.End();
+                return new HttpUnauthorizedResult("Unauthorized");
+            }
             if (!String.IsNullOrEmpty(modelName))
             {
                 ModelDescriptionGenerator modelDescriptionGenerator = Configuration.GetModelDescriptionGenerator();

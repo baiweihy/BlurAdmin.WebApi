@@ -8,9 +8,7 @@ namespace LegacyStandalone.Web
     {
         public static void Register(HttpConfiguration config)
         {
-            config.Filters.Add(new AuthorizeAttribute());
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver(); // camel case
-
 
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.

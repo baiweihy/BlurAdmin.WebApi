@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity.ModelConfiguration;
 
-namespace LegacyApplication.Base
+namespace LegacyApplication.Shared.Features.Base
 {
-    public class EntityBaseConfiguration<T> : EntityTypeConfiguration<T> where T : class, IEntityBase
+    public class EntityBaseConfiguration<T> : EntityTypeConfiguration<T> where T : EntityBase
     {
         public EntityBaseConfiguration()
         {

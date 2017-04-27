@@ -5,8 +5,8 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using LegacyApplication.Base;
 using LegacyApplication.Database.Context;
+using LegacyApplication.Shared.Features.Base;
 
 namespace LegacyApplication.Database.Infrastructure
 {
@@ -21,7 +21,7 @@ namespace LegacyApplication.Database.Infrastructure
             Context = unitOfWork as CoreContext;
         }
         #endregion
-        
+
         public virtual IQueryable<T> All => Context.Set<T>();
 
         public virtual IQueryable<T> AllIncluding(params Expression<Func<T, object>>[] includeProperties)
@@ -129,7 +129,19 @@ namespace LegacyApplication.Database.Infrastructure
                 Context.Entry<T>(entity).State = EntityState.Deleted;
             }
         }
-        
+        public void Attach(T entity)
+        {
+            Context.Set<T>().Attach(entity);
+        }
+
+        public void AttachRange(IEnumerable<T> entities)
+        {
+            foreach (var entity in entities)
+            {
+                Attach(entity);
+            }
+        }
+
         public void Detach(T entity)
         {
             Context.Entry<T>(entity).State = EntityState.Detached;
@@ -139,7 +151,7 @@ namespace LegacyApplication.Database.Infrastructure
         {
             foreach (var entity in entities)
             {
-                Context.Entry<T>(entity).State = EntityState.Detached;
+                Detach(entity);
             }
         }
 

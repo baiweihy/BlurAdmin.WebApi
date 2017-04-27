@@ -1,5 +1,6 @@
-﻿using LegacyApplication.Base;
-using LegacyApplication.Shared.Interfaces;
+﻿using LegacyApplication.Shared.Configurations;
+using LegacyApplication.Shared.Features.Base;
+using LegacyApplication.Shared.Features.File;
 
 namespace LegacyApplication.Models.Core
 {

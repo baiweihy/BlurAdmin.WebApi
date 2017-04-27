@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
@@ -21,10 +19,9 @@ namespace LegacyStandalone.Web.Providers
         {
             if (publicClientId == null)
             {
-                throw new ArgumentNullException("publicClientId");
+                throw new ArgumentNullException(nameof(publicClientId));
             }
 
-            _publicClientId = publicClientId;
         }
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
@@ -44,7 +41,7 @@ namespace LegacyStandalone.Web.Providers
             ClaimsIdentity cookiesIdentity = await user.GenerateUserIdentityAsync(userManager,
                 CookieAuthenticationDefaults.AuthenticationType);
 
-            AuthenticationProperties properties = CreateProperties(user.UserName);
+            AuthenticationProperties properties = CreateCustomProperties(user);
             AuthenticationTicket ticket = new AuthenticationTicket(oAuthIdentity, properties);
             context.Validated(ticket);
             context.Request.Context.Authentication.SignIn(cookiesIdentity);
@@ -91,6 +88,19 @@ namespace LegacyStandalone.Web.Providers
             IDictionary<string, string> data = new Dictionary<string, string>
             {
                 { "userName", userName }
+            };
+            return new AuthenticationProperties(data);
+        }
+
+        public static AuthenticationProperties CreateCustomProperties(ApplicationUser user)
+        {
+            var roleIds = user.Roles.Select(x => x.RoleId)
+                .Aggregate("", (previous, current) => (string.IsNullOrEmpty(previous) ? "" : (previous + ",")) + current);
+            IDictionary<string, string> data = new Dictionary<string, string>
+            {
+                { "userName", user.UserName },
+                { "roles",  roleIds},
+                {"userId", user.Id }
             };
             return new AuthenticationProperties(data);
         }

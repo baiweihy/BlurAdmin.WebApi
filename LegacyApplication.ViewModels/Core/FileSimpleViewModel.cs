@@ -1,4 +1,4 @@
-﻿using LegacyApplication.Shared.Interfaces;
+﻿using LegacyApplication.Shared.Features.File;
 
 namespace LegacyApplication.ViewModels.Core
 {

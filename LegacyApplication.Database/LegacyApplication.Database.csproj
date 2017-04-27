@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LegacyApplication.Database</RootNamespace>
     <AssemblyName>LegacyApplication.Database</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,6 +56,10 @@
     <Compile Include="Migrations\201704161303039_Initial.Designer.cs">
       <DependentUpon>201704161303039_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704270304482_AddDepartment.cs" />
+    <Compile Include="Migrations\201704270304482_AddDepartment.Designer.cs">
+      <DependentUpon>201704270304482_AddDepartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,10 +68,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LegacyApplication.Base\LegacyApplication.Base.csproj">
-      <Project>{05c3523a-2d44-43d4-bae5-30d37a4c178e}</Project>
-      <Name>LegacyApplication.Base</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LegacyApplication.Models\LegacyApplication.Models.csproj">
       <Project>{2ffba5f5-3af3-49d1-b5d7-2afc5aef4606}</Project>
       <Name>LegacyApplication.Models</Name>
@@ -79,6 +80,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201704161303039_Initial.resx">
       <DependentUpon>201704161303039_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704270304482_AddDepartment.resx">
+      <DependentUpon>201704270304482_AddDepartment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -2,14 +2,17 @@
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Diagnostics;
+using System.Reflection;
 using LegacyApplication.Database.Infrastructure;
+using LegacyApplication.Models.Administration;
 using LegacyApplication.Models.Core;
+using LegacyApplication.Shared.Configurations;
 
 namespace LegacyApplication.Database.Context
 {
     public class CoreContext : DbContext, IUnitOfWork
     {
-        public CoreContext(): base("DefaultConnection")
+        public CoreContext() : base(AppSettings.DefaultConnection)
         {
             //System.Data.Entity.Database.SetInitializer<CoreContext>(null);
 #if DEBUG
@@ -21,12 +24,13 @@ namespace LegacyApplication.Database.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            
-            modelBuilder.Configurations.Add(new UploadedFileConfiguration());
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>(); //去掉默认开启的级联删除
+
+            modelBuilder.Configurations.AddFromAssembly(Assembly.GetAssembly(typeof(UploadedFile)));
         }
-        
+
         public DbSet<UploadedFile> UploadedFiles { get; set; }
-        
+        public DbSet<Department> Departments { get; set; }
+
     }
 }

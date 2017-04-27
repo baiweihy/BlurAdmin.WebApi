@@ -1,4 +1,4 @@
-﻿namespace LegacyApplication.Shared.Interfaces
+﻿namespace LegacyApplication.Shared.Features.File
 {
     public interface IFileEntity
     {
