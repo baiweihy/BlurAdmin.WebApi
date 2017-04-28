@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
+using LegacyApplication.Shared.Features.Pagination;
 using LegacyApplication.ViewModels.Administration;
 using LegacyStandalone.Web.Models;
 using Microsoft.AspNet.Identity.Owin;
@@ -36,6 +37,22 @@ namespace LegacyStandalone.Web.Controllers.Administration
             var users = await UserManager.Users.ToListAsync();
             var vms = Mapper.Map<IEnumerable<ApplicationUser>, List<UserViewModel>>(users);
             return vms;
+        }
+
+        [Route("ByPage/{pageIndex}/{pageSize}/{userName?}")]
+        public async Task<PaginatedItemsViewModel<UserViewModel>> GetByPage(int pageIndex, int pageSize, string userName = null)
+        {
+            var exp = UserManager.Users.AsQueryable();
+            if (!string.IsNullOrEmpty(userName))
+            {
+                exp = exp.Where(x => x.UserName.Contains(userName));
+            }
+            var users = await exp.OrderBy(x => x.UserName)
+                .Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
+            var count = await exp.CountAsync();
+            var vms = Mapper.Map<IEnumerable<ApplicationUser>, List<UserViewModel>>(users);
+            var result = new PaginatedItemsViewModel<UserViewModel>(pageIndex, pageSize, count, vms);
+            return result;
         }
 
         public async Task<IHttpActionResult> Post([FromBody] UserViewModel vm)
