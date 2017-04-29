@@ -13,13 +13,10 @@ namespace LegacyApplication.ViewModels.HumanResources
         public string Name { get; set; }
 
         [Display(Name = "员工编号")]
+        [Required(ErrorMessage = "{0}是必填项")]
         [StringLength(50, ErrorMessage = "{0}的长度不可超过{1}")]
         public string No { get; set; }
         
-        [Display(Name = "登录名")]
-        [StringLength(50, ErrorMessage = "{0}的长度不可超过{1}")]
-        public string UserName { get; set; }
-
         [Display(Name = "状态")]
         public EmployeeStatus EmployeeStatus { get; set; }
 

@@ -52,7 +52,7 @@ namespace LegacyStandalone.Web.Controllers.HumanResources
             {
                 exp = exp.Where(x => x.DepartmentId == departmentId.Value);
             }
-            var items = await exp.OrderBy(x => x.UserName)
+            var items = await exp.OrderBy(x => x.No)
                 .Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
             var count = await exp.CountAsync();
             var vms = Mapper.Map<IEnumerable<Employee>, List<EmployeeViewModel>>(items);

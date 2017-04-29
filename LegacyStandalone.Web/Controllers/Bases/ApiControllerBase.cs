@@ -34,7 +34,7 @@ namespace LegacyStandalone.Web.Controllers.Bases
             {
                 return _myDepartment;
             }
-            _myDepartment = await DepartmentRepository.GetSingleAsync(x => x.Employees.Any(y => y.UserName == UserName));
+            _myDepartment = await DepartmentRepository.GetSingleAsync(x => x.Employees.Any(y => y.No == UserName));
             return _myDepartment;
         }
 

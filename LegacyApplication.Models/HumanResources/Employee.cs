@@ -10,7 +10,6 @@ namespace LegacyApplication.Models.HumanResources
     {
         public string Name { get; set; }
         public string No { get; set; }
-        public string UserName { get; set; }
         public EmployeeStatus EmployeeStatus { get; set; }
         public int? DepartmentId { get; set; }
         public Gender Gender { get; set; }
@@ -32,11 +31,7 @@ namespace LegacyApplication.Models.HumanResources
             ToTable("hr.Employee");
 
             Property(x => x.Name).IsRequired().HasMaxLength(100);
-            Property(x => x.No).HasMaxLength(50).HasColumnAnnotation(
-                IndexAnnotation.AnnotationName,
-                new IndexAnnotation(new IndexAttribute { IsUnique = true }));
-
-            Property(x => x.UserName).HasMaxLength(50).HasColumnAnnotation(
+            Property(x => x.No).IsRequired().HasMaxLength(50).HasColumnAnnotation(
                 IndexAnnotation.AnnotationName,
                 new IndexAnnotation(new IndexAttribute { IsUnique = true }));
             Property(x => x.IdNumber).HasMaxLength(50).HasColumnAnnotation(
