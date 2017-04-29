@@ -76,6 +76,10 @@
     <Compile Include="Migrations\201704290509178_AddUniqueIndexesToEmployee.Designer.cs">
       <DependentUpon>201704290509178_AddUniqueIndexesToEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704291358574_EmployeeDataOfBirthNotRequired.cs" />
+    <Compile Include="Migrations\201704291358574_EmployeeDataOfBirthNotRequired.Designer.cs">
+      <DependentUpon>201704291358574_EmployeeDataOfBirthNotRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -111,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704290509178_AddUniqueIndexesToEmployee.resx">
       <DependentUpon>201704290509178_AddUniqueIndexesToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704291358574_EmployeeDataOfBirthNotRequired.resx">
+      <DependentUpon>201704291358574_EmployeeDataOfBirthNotRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

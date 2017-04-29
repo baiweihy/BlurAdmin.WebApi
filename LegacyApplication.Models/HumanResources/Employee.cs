@@ -14,7 +14,7 @@ namespace LegacyApplication.Models.HumanResources
         public EmployeeStatus EmployeeStatus { get; set; }
         public int? DepartmentId { get; set; }
         public Gender Gender { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public string IdNumber { get; set; }
         public string PhoneNumber { get; set; }
         public MaritalStatus MaritalStatus { get; set; }

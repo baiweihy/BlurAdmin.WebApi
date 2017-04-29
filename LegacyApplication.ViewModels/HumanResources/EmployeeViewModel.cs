@@ -29,7 +29,7 @@ namespace LegacyApplication.ViewModels.HumanResources
         public Gender Gender { get; set; }
 
         [Display(Name = "出生日期")]
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
 
         [Display(Name = "身份证号")]
         [StringLength(20, ErrorMessage = "{0}的长度不可超过{1}")]
