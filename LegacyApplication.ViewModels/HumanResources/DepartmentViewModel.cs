@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using LegacyApplication.Shared.Features.Tree;
 
-namespace LegacyApplication.ViewModels.Administration
+namespace LegacyApplication.ViewModels.HumanResources
 {
     public class DepartmentViewModel: TreeEntityBase<DepartmentViewModel>
     {

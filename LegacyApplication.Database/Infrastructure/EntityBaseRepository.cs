@@ -95,11 +95,17 @@ namespace LegacyApplication.Database.Infrastructure
             DbEntityEntry dbEntityEntry = Context.Entry<T>(entity);
             Context.Set<T>().Add(entity);
         }
+
         public virtual void Update(T entity)
         {
-            DbEntityEntry dbEntityEntry = Context.Entry<T>(entity);
+            DbEntityEntry<T> dbEntityEntry = Context.Entry<T>(entity);
             dbEntityEntry.State = EntityState.Modified;
+
+            dbEntityEntry.Property(x => x.Id).IsModified = false;
+            dbEntityEntry.Property(x => x.CreateUser).IsModified = false;
+            dbEntityEntry.Property(x => x.CreateTime).IsModified = false;
         }
+
         public virtual void Delete(T entity)
         {
             DbEntityEntry dbEntityEntry = Context.Entry<T>(entity);
@@ -153,6 +159,12 @@ namespace LegacyApplication.Database.Infrastructure
             {
                 Detach(entity);
             }
+        }
+
+        public void AttachAsModified(T entity)
+        {
+            Attach(entity);
+            Update(entity);
         }
 
         public virtual void ChangeStatus(T entity)

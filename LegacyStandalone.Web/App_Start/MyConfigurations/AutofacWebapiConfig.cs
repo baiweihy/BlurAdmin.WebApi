@@ -4,8 +4,8 @@ using Autofac;
 using Autofac.Integration.WebApi;
 using LegacyApplication.Database.Context;
 using LegacyApplication.Database.Infrastructure;
-using LegacyApplication.Repositories.Administration;
 using LegacyApplication.Repositories.Core;
+using LegacyApplication.Repositories.HumanResources;
 
 namespace LegacyStandalone.Web.MyConfigurations
 {
@@ -35,6 +35,7 @@ namespace LegacyStandalone.Web.MyConfigurations
             builder.RegisterType<UploadedFileRepository>().As<IUploadedFileRepository>().InstancePerRequest();
 
             builder.RegisterType<DepartmentRepository>().As<IDepartmentRepository>().InstancePerRequest();
+            builder.RegisterType<EmployeeRepository>().As<IEmployeeRepository>().InstancePerRequest();
 
             Container = builder.Build();
 

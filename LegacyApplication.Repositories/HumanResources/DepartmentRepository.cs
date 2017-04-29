@@ -1,7 +1,7 @@
 ﻿using LegacyApplication.Database.Infrastructure;
-using LegacyApplication.Models.Administration;
+using LegacyApplication.Models.HumanResources;
 
-namespace LegacyApplication.Repositories.Administration
+namespace LegacyApplication.Repositories.HumanResources
 {
     public interface IDepartmentRepository : IEntityBaseRepository<Department> { }
 

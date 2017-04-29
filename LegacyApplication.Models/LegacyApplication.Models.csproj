@@ -48,8 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administration\Department.cs" />
+    <Compile Include="HumanResources\Department.cs" />
     <Compile Include="Core\UploadedFile.cs" />
+    <Compile Include="HumanResources\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

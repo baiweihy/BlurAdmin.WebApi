@@ -42,11 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administration\DepartmentViewModel.cs" />
-    <Compile Include="Administration\RoleViewModel.cs" />
-    <Compile Include="Administration\UserViewModel.cs" />
+    <Compile Include="HumanResources\DepartmentViewModel.cs" />
+    <Compile Include="Core\RoleViewModel.cs" />
+    <Compile Include="Core\UserViewModel.cs" />
     <Compile Include="Core\FileSimpleViewModel.cs" />
     <Compile Include="Core\UploadedFileViewModel.cs" />
+    <Compile Include="HumanResources\EmployeeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

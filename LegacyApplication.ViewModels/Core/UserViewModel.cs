@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LegacyApplication.ViewModels.Administration
+namespace LegacyApplication.ViewModels.Core
 {
     public class UserViewModel
     {

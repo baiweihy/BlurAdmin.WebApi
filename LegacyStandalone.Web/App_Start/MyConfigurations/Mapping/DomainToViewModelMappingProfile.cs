@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using LegacyApplication.Models.Administration;
 using LegacyApplication.Models.Core;
-using LegacyApplication.ViewModels.Administration;
+using LegacyApplication.Models.HumanResources;
 using LegacyApplication.ViewModels.Core;
+using LegacyApplication.ViewModels.HumanResources;
 using LegacyStandalone.Web.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -19,9 +19,12 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<IdentityUserRole, RoleViewModel>();
 
             CreateMap<UploadedFile, UploadedFileViewModel>();
+
             CreateMap<Department, DepartmentViewModel>()
                 .ForMember(dest => dest.Parent, opt => opt.Ignore())
                 .ForMember(dest => dest.Children, opt => opt.Ignore());
+
+            CreateMap<Employee, EmployeeViewModel>();
         }
     }
 }

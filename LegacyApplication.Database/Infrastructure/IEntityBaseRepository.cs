@@ -31,6 +31,7 @@ namespace LegacyApplication.Database.Infrastructure
         void AttachRange(IEnumerable<T> entities);
         void Detach(T entity);
         void DetachRange(IEnumerable<T> entities);
+        void AttachAsModified(T entity);
         void ChangeStatus(T entity);
     }
 }

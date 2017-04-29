@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
 using LegacyApplication.Database.Infrastructure;
-using LegacyApplication.Models.Administration;
-using LegacyApplication.Repositories.Administration;
+using LegacyApplication.Models.HumanResources;
+using LegacyApplication.Repositories.HumanResources;
 using LegacyApplication.Shared.Features.Tree;
-using LegacyApplication.ViewModels.Administration;
+using LegacyApplication.ViewModels.HumanResources;
 using LegacyStandalone.Web.Controllers.Bases;
 
-namespace LegacyStandalone.Web.Controllers.Administration
+namespace LegacyStandalone.Web.Controllers.HumanResources
 {
     [RoutePrefix("api/Department")]
     public class DepartmentController : ApiControllerBase
@@ -102,6 +102,7 @@ namespace LegacyStandalone.Web.Controllers.Administration
             viewModel = Mapper.Map<Department, DepartmentViewModel>(model);
             return Ok(viewModel);
         }
+
         public async Task<IHttpActionResult> Delete(int id)
         {
             var model = await DepartmentRepository.GetSingleAsync(id);

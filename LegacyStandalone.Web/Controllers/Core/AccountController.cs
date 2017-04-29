@@ -16,7 +16,7 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 
-namespace LegacyStandalone.Web.Controllers.Administration
+namespace LegacyStandalone.Web.Controllers.Core
 {
     [Authorize]
     [RoutePrefix("api/Account")]

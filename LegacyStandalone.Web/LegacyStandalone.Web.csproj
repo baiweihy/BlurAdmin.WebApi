@@ -241,12 +241,13 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\Administration\AccountController.cs" />
-    <Compile Include="Controllers\Administration\DepartmentController.cs" />
-    <Compile Include="Controllers\Administration\RoleController.cs" />
-    <Compile Include="Controllers\Administration\UserController.cs" />
+    <Compile Include="Controllers\Core\AccountController.cs" />
+    <Compile Include="Controllers\HumanResources\DepartmentController.cs" />
+    <Compile Include="Controllers\Core\RoleController.cs" />
+    <Compile Include="Controllers\Core\UserController.cs" />
     <Compile Include="Controllers\Bases\ApiControllerBase.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HumanResources\EmployeeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -313,7 +314,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Core\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -48,8 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administration\DepartmentRepository.cs" />
+    <Compile Include="HumanResources\DepartmentRepository.cs" />
     <Compile Include="Core\UploadedFileRepository.cs" />
+    <Compile Include="HumanResources\EmployeeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

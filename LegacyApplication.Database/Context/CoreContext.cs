@@ -4,8 +4,8 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Diagnostics;
 using System.Reflection;
 using LegacyApplication.Database.Infrastructure;
-using LegacyApplication.Models.Administration;
 using LegacyApplication.Models.Core;
+using LegacyApplication.Models.HumanResources;
 using LegacyApplication.Shared.Configurations;
 
 namespace LegacyApplication.Database.Context
@@ -30,7 +30,9 @@ namespace LegacyApplication.Database.Context
         }
 
         public DbSet<UploadedFile> UploadedFiles { get; set; }
+
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
     }
 }

@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
 using LegacyApplication.Shared.Features.Pagination;
-using LegacyApplication.ViewModels.Administration;
+using LegacyApplication.ViewModels.Core;
 using LegacyStandalone.Web.Models;
 using Microsoft.AspNet.Identity.Owin;
 using Newtonsoft.Json.Linq;
 
-namespace LegacyStandalone.Web.Controllers.Administration
+namespace LegacyStandalone.Web.Controllers.Core
 {
     [Authorize]
     [RoutePrefix("api/User")]

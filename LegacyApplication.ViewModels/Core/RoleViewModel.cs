@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace LegacyApplication.ViewModels.Administration
+namespace LegacyApplication.ViewModels.Core
 {
     public class RoleViewModel
     {
