@@ -14,13 +14,13 @@ using LegacyStandalone.Web.Controllers.Bases;
 namespace LegacyStandalone.Web.Controllers.HumanResources
 {
     [RoutePrefix("api/Employee")]
-    public class EmployeeController: ApiControllerBase
+    public class EmployeeController : ApiControllerBase
     {
         private readonly IEmployeeRepository _employeeRepository;
 
         public EmployeeController(
             IEmployeeRepository employeeRepository,
-            IUnitOfWork unitOfWork, 
+            IUnitOfWork unitOfWork,
             IDepartmentRepository departmentRepository) : base(unitOfWork, departmentRepository)
         {
             _employeeRepository = employeeRepository;
@@ -44,15 +44,25 @@ namespace LegacyStandalone.Web.Controllers.HumanResources
             return NotFound();
         }
 
-        [Route("ByPage/{pageIndex}/{pageSize}/{departmentId?}")]
-        public async Task<PaginatedItemsViewModel<EmployeeViewModel>> GetByPage(int pageIndex, int pageSize, int? departmentId = null)
+        [Route("ByPage/{pageIndex}/{pageSize}/{includeChildren}/{departmentId?}")]
+        public async Task<PaginatedItemsViewModel<EmployeeViewModel>> GetByPage(int pageIndex, int pageSize, bool includeChildren, int? departmentId = null)
         {
-            var exp = _employeeRepository.All.AsQueryable();
+            var exp = _employeeRepository.AllIncluding(x => x.Department).AsQueryable();
             if (departmentId != null)
             {
-                exp = exp.Where(x => x.DepartmentId == departmentId.Value);
+                if (includeChildren)
+                {
+                    var departmentIdStr = departmentId.Value.ToString();
+                    var endStr = $"-{departmentIdStr}";
+                    var containStr = $"-{departmentIdStr}-";
+                    exp = exp.Where(x => x.DepartmentId == departmentId.Value || x.Department.AncestorIds.StartsWith(departmentIdStr) || x.Department.AncestorIds.EndsWith(endStr) || x.Department.AncestorIds.Contains(containStr));
+                }
+                else
+                {
+                    exp = exp.Where(x => x.DepartmentId == departmentId.Value);
+                }
             }
-            var items = await exp.OrderBy(x => x.No)
+            var items = await exp.OrderBy(x => x.Department.Order).ThenBy(x => x.No)
                 .Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
             var count = await exp.CountAsync();
             var vms = Mapper.Map<IEnumerable<Employee>, List<EmployeeViewModel>>(items);
@@ -89,7 +99,7 @@ namespace LegacyStandalone.Web.Controllers.HumanResources
             _employeeRepository.AttachAsModified(model);
 
             await UnitOfWork.SaveChangesAsync();
-            
+
             return Ok(viewModel);
         }
 
@@ -104,6 +114,6 @@ namespace LegacyStandalone.Web.Controllers.HumanResources
             await UnitOfWork.SaveChangesAsync();
             return Ok();
         }
-        
+
     }
 }
