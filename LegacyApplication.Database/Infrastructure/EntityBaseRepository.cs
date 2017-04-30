@@ -99,9 +99,11 @@ namespace LegacyApplication.Database.Infrastructure
         public virtual void Update(T entity)
         {
             DbEntityEntry<T> dbEntityEntry = Context.Entry<T>(entity);
-            dbEntityEntry.State = EntityState.Modified;
 
             dbEntityEntry.Property(x => x.Id).IsModified = false;
+
+            dbEntityEntry.State = EntityState.Modified;
+
             dbEntityEntry.Property(x => x.CreateUser).IsModified = false;
             dbEntityEntry.Property(x => x.CreateTime).IsModified = false;
         }
