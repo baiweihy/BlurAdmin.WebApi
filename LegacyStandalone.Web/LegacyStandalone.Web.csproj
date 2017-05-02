@@ -249,6 +249,8 @@
     <Compile Include="Controllers\Bases\ApiControllerBase.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HumanResources\EmployeeController.cs" />
+    <Compile Include="Controllers\HumanResources\JobPostController.cs" />
+    <Compile Include="Controllers\HumanResources\JobPostLevelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -33,6 +33,7 @@ namespace LegacyApplication.Database.Context
 
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
-
+        public DbSet<JobPostLevel> JobPostLevels { get; set; }
+        public DbSet<JobPost> JobPosts { get; set; }
     }
 }

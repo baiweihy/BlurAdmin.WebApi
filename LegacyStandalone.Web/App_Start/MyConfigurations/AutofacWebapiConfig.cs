@@ -36,6 +36,9 @@ namespace LegacyStandalone.Web.MyConfigurations
 
             builder.RegisterType<DepartmentRepository>().As<IDepartmentRepository>().InstancePerRequest();
             builder.RegisterType<EmployeeRepository>().As<IEmployeeRepository>().InstancePerRequest();
+            builder.RegisterType<JobPostLevelRepository>().As<IJobPostLevelRepository>().InstancePerRequest();
+            builder.RegisterType<JobPostRepository>().As<IJobPostRepository>().InstancePerRequest();
+
 
             Container = builder.Build();
 

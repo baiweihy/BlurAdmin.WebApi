@@ -21,6 +21,13 @@ namespace LegacyApplication.Models.HumanResources
         public string EmailAddress { get; set; }
         public string Remark { get; set; }
 
+        public EmployeeNature EmployeeNature { get; set; }
+        public EducationNature EducationNature { get; set; }
+        public EducationDegree EducationDegree { get; set; }
+
+        public int? JobPostId { get; set; }
+        public JobPost Post { get; set; }
+
         public Department Department { get; set; }
     }
 
@@ -43,6 +50,7 @@ namespace LegacyApplication.Models.HumanResources
             Property(x => x.Remark).HasMaxLength(500);
 
             HasOptional(x => x.Department).WithMany(x => x.Employees).HasForeignKey(x => x.DepartmentId);
+            HasOptional(x => x.Post).WithMany().HasForeignKey(x => x.JobPostId);
         }
     }
 }

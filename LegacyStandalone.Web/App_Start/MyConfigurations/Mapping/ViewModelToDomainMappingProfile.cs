@@ -25,6 +25,8 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
                 .ForMember(dest => dest.Children, opt => opt.Ignore());
 
             CreateMap<EmployeeViewModel, Employee>();
+            CreateMap<JobPostLevelViewModel, JobPostLevel>();
+            CreateMap<JobPostViewModel, JobPost>();
         }
     }
 }

@@ -48,10 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ByModule\HumanResources\Enums\EducationDegree.cs" />
     <Compile Include="ByModule\HumanResources\Enums\EmployeeStatus.cs" />
+    <Compile Include="ByModule\HumanResources\Enums\EmployeeNature.cs" />
     <Compile Include="ByModule\HumanResources\Enums\Gender.cs" />
     <Compile Include="ByModule\HumanResources\Enums\MaritalStatus.cs" />
     <Compile Include="ByModule\HumanResources\Enums\PoliticalStatus.cs" />
+    <Compile Include="ByModule\HumanResources\Enums\EducationNature.cs" />
+    <Compile Include="ByModule\HumanResources\Enums\PostNature.cs" />
     <Compile Include="Features\Order\IOrder.cs" />
     <Compile Include="Features\Tree\TreeEntityBase.cs" />
     <Compile Include="Configurations\AppSettings.cs" />

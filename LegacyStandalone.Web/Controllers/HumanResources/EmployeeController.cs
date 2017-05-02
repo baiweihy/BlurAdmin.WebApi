@@ -28,14 +28,14 @@ namespace LegacyStandalone.Web.Controllers.HumanResources
 
         public async Task<IEnumerable<EmployeeViewModel>> Get()
         {
-            var models = await _employeeRepository.All.ToListAsync();
+            var models = await _employeeRepository.AllIncluding(x => x.Post).ToListAsync();
             var viewModels = Mapper.Map<IEnumerable<Employee>, IEnumerable<EmployeeViewModel>>(models);
             return viewModels;
         }
 
         public async Task<IHttpActionResult> GetOne(int id)
         {
-            var model = await _employeeRepository.GetSingleAsync(id);
+            var model = await _employeeRepository.GetSingleAsync(x => x.Id == id, x => x.Post);
             if (model != null)
             {
                 var viewModel = Mapper.Map<Employee, EmployeeViewModel>(model);
@@ -47,7 +47,7 @@ namespace LegacyStandalone.Web.Controllers.HumanResources
         [Route("ByPage/{pageIndex}/{pageSize}/{includeChildren}/{departmentId?}")]
         public async Task<PaginatedItemsViewModel<EmployeeViewModel>> GetByPage(int pageIndex, int pageSize, bool includeChildren, int? departmentId = null)
         {
-            var exp = _employeeRepository.AllIncluding(x => x.Department).AsQueryable();
+            var exp = _employeeRepository.AllIncluding(x => x.Department, x => x.Post).AsQueryable();
             if (departmentId != null)
             {
                 if (includeChildren)

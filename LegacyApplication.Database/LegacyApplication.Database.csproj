@@ -84,6 +84,18 @@
     <Compile Include="Migrations\201704292238421_RemoveUserNameFromEmployee.Designer.cs">
       <DependentUpon>201704292238421_RemoveUserNameFromEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705020212052_AddSomeHRModels.cs" />
+    <Compile Include="Migrations\201705020212052_AddSomeHRModels.Designer.cs">
+      <DependentUpon>201705020212052_AddSomeHRModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705020229011_AddUniqueIndexToPostAndLevel.cs" />
+    <Compile Include="Migrations\201705020229011_AddUniqueIndexToPostAndLevel.Designer.cs">
+      <DependentUpon>201705020229011_AddUniqueIndexToPostAndLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705020242177_AddPostToEmployee.cs" />
+    <Compile Include="Migrations\201705020242177_AddPostToEmployee.Designer.cs">
+      <DependentUpon>201705020242177_AddPostToEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,6 +137,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704292238421_RemoveUserNameFromEmployee.resx">
       <DependentUpon>201704292238421_RemoveUserNameFromEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705020212052_AddSomeHRModels.resx">
+      <DependentUpon>201705020212052_AddSomeHRModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705020229011_AddUniqueIndexToPostAndLevel.resx">
+      <DependentUpon>201705020229011_AddUniqueIndexToPostAndLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705020242177_AddPostToEmployee.resx">
+      <DependentUpon>201705020242177_AddPostToEmployee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

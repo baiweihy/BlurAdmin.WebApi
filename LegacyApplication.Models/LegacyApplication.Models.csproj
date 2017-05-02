@@ -51,6 +51,8 @@
     <Compile Include="HumanResources\Department.cs" />
     <Compile Include="Core\UploadedFile.cs" />
     <Compile Include="HumanResources\Employee.cs" />
+    <Compile Include="HumanResources\JobPost.cs" />
+    <Compile Include="HumanResources\JobPostLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
