@@ -54,6 +54,14 @@
     <Compile Include="HumanResources\JobPost.cs" />
     <Compile Include="HumanResources\JobPostLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scrum\Bug.cs" />
+    <Compile Include="Scrum\BugTask.cs" />
+    <Compile Include="Scrum\Feature.cs" />
+    <Compile Include="Scrum\ProductBacklogItem.cs" />
+    <Compile Include="Scrum\ProductBacklogItemTask.cs" />
+    <Compile Include="Scrum\Project.cs" />
+    <Compile Include="Scrum\ProjectTeamMember.cs" />
+    <Compile Include="Scrum\Sprint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

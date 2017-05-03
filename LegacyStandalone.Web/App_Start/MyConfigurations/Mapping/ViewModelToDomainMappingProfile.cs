@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using LegacyApplication.Models.Core;
 using LegacyApplication.Models.HumanResources;
+using LegacyApplication.Models.Scrum;
 using LegacyApplication.ViewModels.Core;
 using LegacyApplication.ViewModels.HumanResources;
+using LegacyApplication.ViewModels.Scrum;
 using LegacyStandalone.Web.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -23,10 +25,18 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<DepartmentViewModel, Department>()
                 .ForMember(dest => dest.Parent, opt => opt.Ignore())
                 .ForMember(dest => dest.Children, opt => opt.Ignore());
-
             CreateMap<EmployeeViewModel, Employee>();
             CreateMap<JobPostLevelViewModel, JobPostLevel>();
             CreateMap<JobPostViewModel, JobPost>();
+
+            CreateMap<ProjectViewModel, Project>();
+            CreateMap<FeatureViewModel, Feature>();
+            CreateMap<SprintViewModel, Sprint>();
+            CreateMap<ProductBacklogItemViewModel, ProductBacklogItem>();
+            CreateMap<BugViewModel, Bug>();
+            CreateMap<ProductBacklogItemTaskViewModel, ProductBacklogItemTask>();
+            CreateMap<BugTaskViewModel, BugTask>();
+            CreateMap<ProjectTeamMemberViewModel, ProjectTeamMember>();
         }
     }
 }

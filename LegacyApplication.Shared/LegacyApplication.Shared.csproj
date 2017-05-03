@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ByModule\HumanResources\Enums\EducationalBackground.cs" />
     <Compile Include="ByModule\HumanResources\Enums\EducationDegree.cs" />
     <Compile Include="ByModule\HumanResources\Enums\EmployeeStatus.cs" />
     <Compile Include="ByModule\HumanResources\Enums\EmployeeNature.cs" />
@@ -56,6 +57,13 @@
     <Compile Include="ByModule\HumanResources\Enums\PoliticalStatus.cs" />
     <Compile Include="ByModule\HumanResources\Enums\EducationNature.cs" />
     <Compile Include="ByModule\HumanResources\Enums\PostNature.cs" />
+    <Compile Include="ByModule\Scrum\Enums\BugSeverity.cs" />
+    <Compile Include="ByModule\Scrum\Enums\BugStatus.cs" />
+    <Compile Include="ByModule\Scrum\Enums\BugTaskStatus.cs" />
+    <Compile Include="ByModule\Scrum\Enums\FeatureStatus.cs" />
+    <Compile Include="ByModule\Scrum\Enums\ProductBacklogItemStatus.cs" />
+    <Compile Include="ByModule\Scrum\Enums\ProductBacklogItemTaskStatus.cs" />
+    <Compile Include="ByModule\Scrum\Enums\SprintStatus.cs" />
     <Compile Include="Features\Order\IOrder.cs" />
     <Compile Include="Features\Tree\TreeEntityBase.cs" />
     <Compile Include="Configurations\AppSettings.cs" />

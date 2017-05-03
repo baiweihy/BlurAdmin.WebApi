@@ -96,6 +96,14 @@
     <Compile Include="Migrations\201705020242177_AddPostToEmployee.Designer.cs">
       <DependentUpon>201705020242177_AddPostToEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705030520435_AddEducationalBackground.cs" />
+    <Compile Include="Migrations\201705030520435_AddEducationalBackground.Designer.cs">
+      <DependentUpon>201705030520435_AddEducationalBackground.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705030616064_AddScrumModules.cs" />
+    <Compile Include="Migrations\201705030616064_AddScrumModules.Designer.cs">
+      <DependentUpon>201705030616064_AddScrumModules.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -146,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705020242177_AddPostToEmployee.resx">
       <DependentUpon>201705020242177_AddPostToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705030520435_AddEducationalBackground.resx">
+      <DependentUpon>201705030520435_AddEducationalBackground.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705030616064_AddScrumModules.resx">
+      <DependentUpon>201705030616064_AddScrumModules.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

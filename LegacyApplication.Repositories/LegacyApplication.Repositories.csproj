@@ -54,6 +54,14 @@
     <Compile Include="HumanResources\JobPostLevelRepository.cs" />
     <Compile Include="HumanResources\JobPostRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scrum\BugRepository.cs" />
+    <Compile Include="Scrum\BugTaskRepository.cs" />
+    <Compile Include="Scrum\FeatureRepository.cs" />
+    <Compile Include="Scrum\ProductBacklogItemRepository.cs" />
+    <Compile Include="Scrum\ProductBacklogItemTaskRepository.cs" />
+    <Compile Include="Scrum\ProjectRepository.cs" />
+    <Compile Include="Scrum\ProjectTeamMemberRepository.cs" />
+    <Compile Include="Scrum\SprintRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

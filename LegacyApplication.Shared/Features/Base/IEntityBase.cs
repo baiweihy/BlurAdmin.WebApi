@@ -1,5 +1,4 @@
 ﻿using System;
-using LegacyApplication.Shared.Enums;
 using LegacyApplication.Shared.Features.Order;
 
 namespace LegacyApplication.Shared.Features.Base
@@ -12,7 +11,5 @@ namespace LegacyApplication.Shared.Features.Base
         string CreateUser { get; set; }
         string UpdateUser { get; set; }
         string LastAction { get; set; }
-        Status Status { get; set; }
-        string StatusDisplay { get; }
     }
 }

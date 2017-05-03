@@ -10,7 +10,6 @@ namespace LegacyApplication.Shared.Features.Base
             CreateTime = UpdateTime = DateTime.Now;
             LastAction = "创建";
             CreateUser = UpdateUser = userName;
-            Status = Status.正常;
         }
 
         public int Id { get; set; }
@@ -19,8 +18,6 @@ namespace LegacyApplication.Shared.Features.Base
         public string CreateUser { get; set; }
         public string UpdateUser { get; set; }
         public string LastAction { get; set; }
-        public Status Status { get; set; }
-        public string StatusDisplay => Status.ToString();
 
         public int Order { get; set; }
     }
