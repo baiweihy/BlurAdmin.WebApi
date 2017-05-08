@@ -104,6 +104,14 @@
     <Compile Include="Migrations\201705030616064_AddScrumModules.Designer.cs">
       <DependentUpon>201705030616064_AddScrumModules.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705050347444_AddAdministrative.cs" />
+    <Compile Include="Migrations\201705050347444_AddAdministrative.Designer.cs">
+      <DependentUpon>201705050347444_AddAdministrative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705080121002_AddTitle.cs" />
+    <Compile Include="Migrations\201705080121002_AddTitle.Designer.cs">
+      <DependentUpon>201705080121002_AddTitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -160,6 +168,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705030616064_AddScrumModules.resx">
       <DependentUpon>201705030616064_AddScrumModules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050347444_AddAdministrative.resx">
+      <DependentUpon>201705050347444_AddAdministrative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705080121002_AddTitle.resx">
+      <DependentUpon>201705080121002_AddTitle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

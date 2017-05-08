@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ByModule\HumanResources\Enums\TitlePostNature.cs" />
     <Compile Include="ByModule\HumanResources\Enums\EducationalBackground.cs" />
     <Compile Include="ByModule\HumanResources\Enums\EducationDegree.cs" />
     <Compile Include="ByModule\HumanResources\Enums\EmployeeStatus.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="ByModule\HumanResources\Enums\MaritalStatus.cs" />
     <Compile Include="ByModule\HumanResources\Enums\PoliticalStatus.cs" />
     <Compile Include="ByModule\HumanResources\Enums\EducationNature.cs" />
+    <Compile Include="ByModule\HumanResources\Enums\AdministrativePostNature.cs" />
     <Compile Include="ByModule\HumanResources\Enums\PostNature.cs" />
     <Compile Include="ByModule\Scrum\Enums\BugSeverity.cs" />
     <Compile Include="ByModule\Scrum\Enums\BugStatus.cs" />

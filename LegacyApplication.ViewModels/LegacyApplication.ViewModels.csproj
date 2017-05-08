@@ -42,13 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HumanResources\TitleLevelViewModel.cs" />
+    <Compile Include="HumanResources\TitlePostViewModel.cs" />
     <Compile Include="HumanResources\DepartmentViewModel.cs" />
     <Compile Include="Core\RoleViewModel.cs" />
     <Compile Include="Core\UserViewModel.cs" />
     <Compile Include="Core\FileSimpleViewModel.cs" />
     <Compile Include="Core\UploadedFileViewModel.cs" />
     <Compile Include="HumanResources\EmployeeViewModel.cs" />
+    <Compile Include="HumanResources\AdministrativeLevelViewModel.cs" />
     <Compile Include="HumanResources\JobPostLevelViewModel.cs" />
+    <Compile Include="HumanResources\AdministrativePostViewModel.cs" />
     <Compile Include="HumanResources\JobPostViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scrum\BugTaskViewModel.cs" />
