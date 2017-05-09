@@ -112,6 +112,10 @@
     <Compile Include="Migrations\201705080121002_AddTitle.Designer.cs">
       <DependentUpon>201705080121002_AddTitle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705090057521_UpdateMissingMigrations.cs" />
+    <Compile Include="Migrations\201705090057521_UpdateMissingMigrations.Designer.cs">
+      <DependentUpon>201705090057521_UpdateMissingMigrations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -174,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705080121002_AddTitle.resx">
       <DependentUpon>201705080121002_AddTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705090057521_UpdateMissingMigrations.resx">
+      <DependentUpon>201705090057521_UpdateMissingMigrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

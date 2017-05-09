@@ -10,7 +10,6 @@ namespace LegacyApplication.Models.HumanResources
     public class AdministrativeLevel : EntityBase
     {
         public string Name { get; set; }
-        public int Age { get; set; }
         public ICollection<AdministrativePost> AdministrativePosts { get; set; }
     }
 
