@@ -242,13 +242,17 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\Bases\SharedController.cs" />
     <Compile Include="Controllers\Core\AccountController.cs" />
+    <Compile Include="Controllers\HumanResources\TitleLevelController.cs" />
+    <Compile Include="Controllers\HumanResources\TitlePostController.cs" />
     <Compile Include="Controllers\HumanResources\DepartmentController.cs" />
     <Compile Include="Controllers\Core\RoleController.cs" />
     <Compile Include="Controllers\Core\UserController.cs" />
     <Compile Include="Controllers\Bases\ApiControllerBase.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HumanResources\EmployeeController.cs" />
+    <Compile Include="Controllers\HumanResources\AdministrativePostController.cs" />
     <Compile Include="Controllers\HumanResources\JobPostController.cs" />
+    <Compile Include="Controllers\HumanResources\AdministrativeLevelController.cs" />
     <Compile Include="Controllers\HumanResources\JobPostLevelController.cs" />
     <Compile Include="Controllers\Scrum\BugController.cs" />
     <Compile Include="Controllers\Scrum\BugTaskController.cs" />
