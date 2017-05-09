@@ -9,6 +9,8 @@ using LegacyApplication.Repositories.HumanResources;
 using LegacyApplication.Repositories.Scrum;
 using LegacyApplication.ViewModels.Scrum;
 using LegacyStandalone.Web.Controllers.Bases;
+using LegacyApplication.Shared.Features.Pagination;
+using System.Linq;
 
 namespace LegacyStandalone.Web.Controllers.Scrum
 {
@@ -40,6 +42,19 @@ namespace LegacyStandalone.Web.Controllers.Scrum
                 return Ok(viewModel);
             }
             return NotFound();
+        }
+
+        [Route("ByPage/{pageIndex}/{pageSize}")]
+        public async Task<PaginatedItemsViewModel<ProjectViewModel>> GetByPage(int pageIndex, int pageSize)
+        {
+            var exp = _projectRepository.All.AsQueryable();
+            
+            var items = await exp.OrderByDescending(x => x.Id)
+                .Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
+            var count = await exp.CountAsync();
+            var vms = Mapper.Map<IEnumerable<Project>, List<ProjectViewModel>>(items);
+            var result = new PaginatedItemsViewModel<ProjectViewModel>(pageIndex, pageSize, count, vms);
+            return result;
         }
 
         public async Task<IHttpActionResult> Post([FromBody]ProjectViewModel viewModel)
