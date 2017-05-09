@@ -3,7 +3,7 @@ namespace LegacyApplication.Database.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class UpdateMissingMigrations : DbMigration
+    public partial class UpdateModels : DbMigration
     {
         public override void Up()
         {

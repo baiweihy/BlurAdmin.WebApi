@@ -7,13 +7,13 @@ namespace LegacyApplication.Database.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class UpdateMissingMigrations : IMigrationMetadata
+    public sealed partial class UpdateModels : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateMissingMigrations));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateModels));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705090057521_UpdateMissingMigrations"; }
+            get { return "201705090201138_UpdateModels"; }
         }
         
         string IMigrationMetadata.Source
