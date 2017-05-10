@@ -66,6 +66,9 @@
     <Compile Include="Scrum\ProjectRepository.cs" />
     <Compile Include="Scrum\ProjectTeamMemberRepository.cs" />
     <Compile Include="Scrum\SprintRepository.cs" />
+    <Compile Include="Work\InternalMailAttachmentRepository.cs" />
+    <Compile Include="Work\InternalMailToRepository.cs" />
+    <Compile Include="Work\InternalMailRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

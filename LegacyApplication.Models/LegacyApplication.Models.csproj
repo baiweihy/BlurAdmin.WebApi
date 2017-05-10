@@ -66,6 +66,9 @@
     <Compile Include="Scrum\Project.cs" />
     <Compile Include="Scrum\ProjectTeamMember.cs" />
     <Compile Include="Scrum\Sprint.cs" />
+    <Compile Include="Work\InternalMail.cs" />
+    <Compile Include="Work\InternalMailAttachment.cs" />
+    <Compile Include="Work\InternalMailTo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -77,5 +80,6 @@
       <Name>LegacyApplication.Shared</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

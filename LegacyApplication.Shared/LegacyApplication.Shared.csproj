@@ -66,6 +66,7 @@
     <Compile Include="ByModule\Scrum\Enums\ProductBacklogItemStatus.cs" />
     <Compile Include="ByModule\Scrum\Enums\ProductBacklogItemTaskStatus.cs" />
     <Compile Include="ByModule\Scrum\Enums\SprintStatus.cs" />
+    <Compile Include="ByModule\Work\Enums\MailType.cs" />
     <Compile Include="Features\Order\IOrder.cs" />
     <Compile Include="Features\Tree\TreeEntityBase.cs" />
     <Compile Include="Configurations\AppSettings.cs" />

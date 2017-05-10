@@ -7,6 +7,7 @@ using LegacyApplication.Database.Infrastructure;
 using LegacyApplication.Models.Core;
 using LegacyApplication.Models.HumanResources;
 using LegacyApplication.Models.Scrum;
+using LegacyApplication.Models.Work;
 using LegacyApplication.Shared.Configurations;
 
 namespace LegacyApplication.Database.Context
@@ -32,6 +33,11 @@ namespace LegacyApplication.Database.Context
 
         //Core
         public DbSet<UploadedFile> UploadedFiles { get; set; }
+
+        //Work
+        public DbSet<InternalMail> InternalMails { get; set; }
+        public DbSet<InternalMailTo> InternalMailTos { get; set; }
+        public DbSet<InternalMailAttachment> InternalMailAttachments { get; set; }
 
         //HR
         public DbSet<Department> Departments { get; set; }

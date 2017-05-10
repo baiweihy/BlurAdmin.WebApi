@@ -63,6 +63,9 @@
     <Compile Include="Scrum\ProjectTeamMemberViewModel.cs" />
     <Compile Include="Scrum\ProjectViewModel.cs" />
     <Compile Include="Scrum\SprintViewModel.cs" />
+    <Compile Include="Work\InternalMailViewModel.cs" />
+    <Compile Include="Work\InternalMailAttachmentViewModel.cs" />
+    <Compile Include="Work\InternalMailToViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LegacyApplication.Shared\LegacyApplication.Shared.csproj">

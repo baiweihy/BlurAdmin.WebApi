@@ -2,9 +2,11 @@
 using LegacyApplication.Models.Core;
 using LegacyApplication.Models.HumanResources;
 using LegacyApplication.Models.Scrum;
+using LegacyApplication.Models.Work;
 using LegacyApplication.ViewModels.Core;
 using LegacyApplication.ViewModels.HumanResources;
 using LegacyApplication.ViewModels.Scrum;
+using LegacyApplication.ViewModels.Work;
 using LegacyStandalone.Web.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -21,6 +23,10 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<IdentityUserRole, RoleViewModel>();
 
             CreateMap<UploadedFile, UploadedFileViewModel>();
+
+            CreateMap<InternalMail, InternalMailViewModel>();
+            CreateMap<InternalMailTo, InternalMailToViewModel>();
+            CreateMap<InternalMailAttachment, InternalMailAttachmentViewModel>();
 
             CreateMap<Department, DepartmentViewModel>()
                 .ForMember(dest => dest.Parent, opt => opt.Ignore())

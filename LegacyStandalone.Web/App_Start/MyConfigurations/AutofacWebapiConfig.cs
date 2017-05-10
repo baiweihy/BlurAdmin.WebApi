@@ -7,6 +7,7 @@ using LegacyApplication.Database.Infrastructure;
 using LegacyApplication.Repositories.Core;
 using LegacyApplication.Repositories.HumanResources;
 using LegacyApplication.Repositories.Scrum;
+using LegacyApplication.Repositories.Work;
 
 namespace LegacyStandalone.Web.MyConfigurations
 {
@@ -35,6 +36,11 @@ namespace LegacyStandalone.Web.MyConfigurations
             
             //Core
             builder.RegisterType<UploadedFileRepository>().As<IUploadedFileRepository>().InstancePerRequest();
+
+            //Work
+            builder.RegisterType<InternalMailRepository>().As<IInternalMailRepository>().InstancePerRequest();
+            builder.RegisterType<InternalMailToRepository>().As<IInternalMailToRepository>().InstancePerRequest();
+            builder.RegisterType<InternalMailAttachmentRepository>().As<IInternalMailAttachmentRepository>().InstancePerRequest();
 
             //HR
             builder.RegisterType<DepartmentRepository>().As<IDepartmentRepository>().InstancePerRequest();
