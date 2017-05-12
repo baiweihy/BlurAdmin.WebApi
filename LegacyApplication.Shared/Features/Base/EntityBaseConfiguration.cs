@@ -12,7 +12,6 @@ namespace LegacyApplication.Shared.Features.Base
             Property(x => x.CreateUser).IsRequired().HasMaxLength(50);
             Property(x => x.UpdateUser).IsRequired().HasMaxLength(50);
             Property(x => x.LastAction).IsRequired().HasMaxLength(50);
-            Ignore(x => x.StatusDisplay);
         }
     }
 }

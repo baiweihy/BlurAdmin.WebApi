@@ -168,12 +168,6 @@ namespace LegacyApplication.Database.Infrastructure
             Attach(entity);
             Update(entity);
         }
-
-        public virtual void ChangeStatus(T entity)
-        {
-            var dbEntityEntry = Context.Entry<T>(entity);
-            dbEntityEntry.Property(x => x.Status).IsModified = true;
-        }
-
+        
     }
 }

@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LegacyStandalone.Web</RootNamespace>
     <AssemblyName>LegacyStandalone.Web</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -70,7 +70,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.Cors, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
@@ -79,9 +78,9 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -243,14 +242,26 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\Bases\SharedController.cs" />
     <Compile Include="Controllers\Core\AccountController.cs" />
+    <Compile Include="Controllers\HumanResources\TitleLevelController.cs" />
+    <Compile Include="Controllers\HumanResources\TitlePostController.cs" />
     <Compile Include="Controllers\HumanResources\DepartmentController.cs" />
     <Compile Include="Controllers\Core\RoleController.cs" />
     <Compile Include="Controllers\Core\UserController.cs" />
     <Compile Include="Controllers\Bases\ApiControllerBase.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HumanResources\EmployeeController.cs" />
+    <Compile Include="Controllers\HumanResources\AdministrativePostController.cs" />
     <Compile Include="Controllers\HumanResources\JobPostController.cs" />
+    <Compile Include="Controllers\HumanResources\AdministrativeLevelController.cs" />
     <Compile Include="Controllers\HumanResources\JobPostLevelController.cs" />
+    <Compile Include="Controllers\Scrum\BugController.cs" />
+    <Compile Include="Controllers\Scrum\BugTaskController.cs" />
+    <Compile Include="Controllers\Scrum\FeatureController.cs" />
+    <Compile Include="Controllers\Scrum\ProductBacklogItemController.cs" />
+    <Compile Include="Controllers\Scrum\ProductBacklogItemTaskController.cs" />
+    <Compile Include="Controllers\Scrum\ProjectController.cs" />
+    <Compile Include="Controllers\Scrum\ProjectTeamMemberController.cs" />
+    <Compile Include="Controllers\Scrum\SprintController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

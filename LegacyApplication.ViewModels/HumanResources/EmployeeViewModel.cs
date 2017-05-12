@@ -74,6 +74,10 @@ namespace LegacyApplication.ViewModels.HumanResources
         [Display(Name = "学位")]
         public string EducationDegreeDisplay => EducationDegree.ToString();
 
+        [Display(Name = "学历")]
+        public EducationalBackground EducationalBackground { get; set; }
+        public string EducationalBackgroundDisplay => EducationalBackground.ToString();
+
         [Display(Name = "岗位ID")]
         public int? JobPostId { get; set; }
 

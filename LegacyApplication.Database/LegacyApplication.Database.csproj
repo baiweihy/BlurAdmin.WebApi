@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LegacyApplication.Database</RootNamespace>
     <AssemblyName>LegacyApplication.Database</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -96,6 +96,30 @@
     <Compile Include="Migrations\201705020242177_AddPostToEmployee.Designer.cs">
       <DependentUpon>201705020242177_AddPostToEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705030520435_AddEducationalBackground.cs" />
+    <Compile Include="Migrations\201705030520435_AddEducationalBackground.Designer.cs">
+      <DependentUpon>201705030520435_AddEducationalBackground.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705030616064_AddScrumModules.cs" />
+    <Compile Include="Migrations\201705030616064_AddScrumModules.Designer.cs">
+      <DependentUpon>201705030616064_AddScrumModules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705050347444_AddAdministrative.cs" />
+    <Compile Include="Migrations\201705050347444_AddAdministrative.Designer.cs">
+      <DependentUpon>201705050347444_AddAdministrative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705080121002_AddTitle.cs" />
+    <Compile Include="Migrations\201705080121002_AddTitle.Designer.cs">
+      <DependentUpon>201705080121002_AddTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705090201138_UpdateModels.cs" />
+    <Compile Include="Migrations\201705090201138_UpdateModels.Designer.cs">
+      <DependentUpon>201705090201138_UpdateModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705100831349_AddMail.cs" />
+    <Compile Include="Migrations\201705100831349_AddMail.Designer.cs">
+      <DependentUpon>201705100831349_AddMail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -146,6 +170,25 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705020242177_AddPostToEmployee.resx">
       <DependentUpon>201705020242177_AddPostToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705030520435_AddEducationalBackground.resx">
+      <DependentUpon>201705030520435_AddEducationalBackground.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705030616064_AddScrumModules.resx">
+      <DependentUpon>201705030616064_AddScrumModules.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705050347444_AddAdministrative.resx">
+      <DependentUpon>201705050347444_AddAdministrative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705080121002_AddTitle.resx">
+      <DependentUpon>201705080121002_AddTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705090201138_UpdateModels.resx">
+      <DependentUpon>201705090201138_UpdateModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705100831349_AddMail.resx">
+      <DependentUpon>201705100831349_AddMail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

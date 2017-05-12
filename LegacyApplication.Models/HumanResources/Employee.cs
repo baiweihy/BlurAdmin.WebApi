@@ -24,6 +24,7 @@ namespace LegacyApplication.Models.HumanResources
         public EmployeeNature EmployeeNature { get; set; }
         public EducationNature EducationNature { get; set; }
         public EducationDegree EducationDegree { get; set; }
+        public EducationalBackground EducationalBackground { get; set; }
 
         public int? JobPostId { get; set; }
         public JobPost Post { get; set; }
