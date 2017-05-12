@@ -53,6 +53,7 @@
     <Compile Include="HumanResources\EmployeeRepository.cs" />
     <Compile Include="HumanResources\JobPostLevelRepository.cs" />
     <Compile Include="HumanResources\JobPostRepository.cs" />
+    <Compile Include="OnlineTraining\CategoryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,5 +74,6 @@
       <Name>LegacyApplication.Shared</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

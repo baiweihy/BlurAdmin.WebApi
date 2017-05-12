@@ -7,6 +7,7 @@ using LegacyApplication.Database.Infrastructure;
 using LegacyApplication.Models.Core;
 using LegacyApplication.Models.HumanResources;
 using LegacyApplication.Shared.Configurations;
+using LegacyApplication.Models.OnlineTraining;
 
 namespace LegacyApplication.Database.Context
 {
@@ -35,5 +36,6 @@ namespace LegacyApplication.Database.Context
         public DbSet<Employee> Employees { get; set; }
         public DbSet<JobPostLevel> JobPostLevels { get; set; }
         public DbSet<JobPost> JobPosts { get; set; }
+        public DbSet<Category> Categorys { get; set; }
     }
 }

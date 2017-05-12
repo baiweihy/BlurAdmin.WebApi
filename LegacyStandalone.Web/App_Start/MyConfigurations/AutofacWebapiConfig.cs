@@ -6,6 +6,7 @@ using LegacyApplication.Database.Context;
 using LegacyApplication.Database.Infrastructure;
 using LegacyApplication.Repositories.Core;
 using LegacyApplication.Repositories.HumanResources;
+using LegacyApplication.Repositories.OnlineTraining;
 
 namespace LegacyStandalone.Web.MyConfigurations
 {
@@ -38,7 +39,7 @@ namespace LegacyStandalone.Web.MyConfigurations
             builder.RegisterType<EmployeeRepository>().As<IEmployeeRepository>().InstancePerRequest();
             builder.RegisterType<JobPostLevelRepository>().As<IJobPostLevelRepository>().InstancePerRequest();
             builder.RegisterType<JobPostRepository>().As<IJobPostRepository>().InstancePerRequest();
-
+            builder.RegisterType<CategoryRepository>().As<ICategoryRepository>().InstancePerRequest();
 
             Container = builder.Build();
 

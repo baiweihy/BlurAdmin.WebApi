@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using LegacyApplication.Models.Core;
 using LegacyApplication.Models.HumanResources;
+using LegacyApplication.Models.OnlineTraining;
 using LegacyApplication.ViewModels.Core;
 using LegacyApplication.ViewModels.HumanResources;
+using LegacyApplication.ViewModels.OnlineTraining;
 using LegacyStandalone.Web.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -27,6 +29,7 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<EmployeeViewModel, Employee>();
             CreateMap<JobPostLevelViewModel, JobPostLevel>();
             CreateMap<JobPostViewModel, JobPost>();
+            CreateMap<CategoryViewModel, Category>();
         }
     }
 }
