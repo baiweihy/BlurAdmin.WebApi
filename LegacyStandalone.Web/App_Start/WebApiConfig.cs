@@ -10,7 +10,6 @@ namespace LegacyStandalone.Web
         public static void Register(HttpConfiguration config)
         {
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver(); // camel case
-            //config.Formatters.JsonFormatter.SerializerSettings.DateFormatString = "yyyy-MM-dd";
             config.Formatters.JsonFormatter.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Local;
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
