@@ -9,6 +9,7 @@ using LegacyApplication.Repositories.HumanResources;
 using LegacyApplication.Repositories.Scrum;
 using LegacyApplication.ViewModels.Scrum;
 using LegacyStandalone.Web.Controllers.Bases;
+using System.Linq;
 
 namespace LegacyStandalone.Web.Controllers.Scrum
 {
@@ -85,6 +86,14 @@ namespace LegacyStandalone.Web.Controllers.Scrum
             _sprintRepository.Delete(model);
             await UnitOfWork.SaveChangesAsync();
             return Ok();
+        }
+        [HttpGet]
+        [Route("QuerySprints/{projectId}")]
+        public async Task<IEnumerable<SprintViewModel>> QuerySprints(int projectId)
+        {
+            var models = await _sprintRepository.All.Where(x => x.ProjectId == projectId).ToListAsync();
+            var viewModels = Mapper.Map<IEnumerable<Sprint>, IEnumerable<SprintViewModel>>(models);
+            return viewModels;
         }
     }
 }
