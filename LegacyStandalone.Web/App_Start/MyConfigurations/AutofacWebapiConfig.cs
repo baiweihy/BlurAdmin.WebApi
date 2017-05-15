@@ -7,6 +7,8 @@ using LegacyApplication.Database.Infrastructure;
 using LegacyApplication.Repositories.Core;
 using LegacyApplication.Repositories.HumanResources;
 using LegacyApplication.Repositories.Scrum;
+using LegacyApplication.Repositories.Work;
+using LegacyApplication.Repositories.OnlineTraining;
 
 namespace LegacyStandalone.Web.MyConfigurations
 {
@@ -36,16 +38,19 @@ namespace LegacyStandalone.Web.MyConfigurations
             //Core
             builder.RegisterType<UploadedFileRepository>().As<IUploadedFileRepository>().InstancePerRequest();
 
+            //Work
+            builder.RegisterType<InternalMailRepository>().As<IInternalMailRepository>().InstancePerRequest();
+            builder.RegisterType<InternalMailToRepository>().As<IInternalMailToRepository>().InstancePerRequest();
+            builder.RegisterType<InternalMailAttachmentRepository>().As<IInternalMailAttachmentRepository>().InstancePerRequest();
+
             //HR
             builder.RegisterType<DepartmentRepository>().As<IDepartmentRepository>().InstancePerRequest();
             builder.RegisterType<EmployeeRepository>().As<IEmployeeRepository>().InstancePerRequest();
             builder.RegisterType<JobPostLevelRepository>().As<IJobPostLevelRepository>().InstancePerRequest();
             builder.RegisterType<JobPostRepository>().As<IJobPostRepository>().InstancePerRequest();
             builder.RegisterType<AdministrativeLevelRepository>().As<IAdministrativeLevelRepository>().InstancePerRequest();
-            builder.RegisterType<AdministrativePostRepository>().As<IAdministrativePostRepository>().InstancePerRequest();
             builder.RegisterType<TitleLevelRepository>().As<ITitleLevelRepository>().InstancePerRequest();
-            builder.RegisterType<TitlePostRepository>().As<ITitlePostRepository>().InstancePerRequest();
-
+            
             //Scrum
             builder.RegisterType<BugRepository>().As<IBugRepository>().InstancePerRequest();
             builder.RegisterType<BugTaskRepository>().As<IBugTaskRepository>().InstancePerRequest();
@@ -56,6 +61,7 @@ namespace LegacyStandalone.Web.MyConfigurations
             builder.RegisterType<ProjectTeamMemberRepository>().As<IProjectTeamMemberRepository>().InstancePerRequest();
             builder.RegisterType<SprintRepository>().As<ISprintRepository>().InstancePerRequest();
 
+            builder.RegisterType<CategoryRepository>().As<ICategoryRepository>().InstancePerRequest();
 
             Container = builder.Build();
 

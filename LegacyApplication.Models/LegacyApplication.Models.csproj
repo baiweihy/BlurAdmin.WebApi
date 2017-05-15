@@ -49,14 +49,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HumanResources\TitleLevel.cs" />
-    <Compile Include="HumanResources\TitlePost.cs" />
     <Compile Include="HumanResources\Department.cs" />
     <Compile Include="Core\UploadedFile.cs" />
     <Compile Include="HumanResources\AdministrativeLevel.cs" />
     <Compile Include="HumanResources\Employee.cs" />
-    <Compile Include="HumanResources\AdministrativePost.cs" />
     <Compile Include="HumanResources\JobPost.cs" />
     <Compile Include="HumanResources\JobPostLevel.cs" />
+    <Compile Include="OnlineTraining\Category.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scrum\Bug.cs" />
     <Compile Include="Scrum\BugTask.cs" />
@@ -66,6 +65,9 @@
     <Compile Include="Scrum\Project.cs" />
     <Compile Include="Scrum\ProjectTeamMember.cs" />
     <Compile Include="Scrum\Sprint.cs" />
+    <Compile Include="Work\InternalMail.cs" />
+    <Compile Include="Work\InternalMailAttachment.cs" />
+    <Compile Include="Work\InternalMailTo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -77,5 +79,6 @@
       <Name>LegacyApplication.Shared</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

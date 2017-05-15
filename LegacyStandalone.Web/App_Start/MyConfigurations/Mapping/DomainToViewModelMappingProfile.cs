@@ -2,11 +2,15 @@
 using LegacyApplication.Models.Core;
 using LegacyApplication.Models.HumanResources;
 using LegacyApplication.Models.Scrum;
+using LegacyApplication.Models.Work;
+using LegacyApplication.Models.OnlineTraining;
 using LegacyApplication.ViewModels.Core;
 using LegacyApplication.ViewModels.HumanResources;
-using LegacyApplication.ViewModels.Scrum;
 using LegacyStandalone.Web.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
+using LegacyApplication.ViewModels.Scrum;
+using LegacyApplication.ViewModels.Work;
+using LegacyApplication.ViewModels.OnlineTraining;
 
 namespace LegacyStandalone.Web.MyConfigurations.Mapping
 {
@@ -22,6 +26,10 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
 
             CreateMap<UploadedFile, UploadedFileViewModel>();
 
+            CreateMap<InternalMail, InternalMailViewModel>();
+            CreateMap<InternalMailTo, InternalMailToViewModel>();
+            CreateMap<InternalMailAttachment, InternalMailAttachmentViewModel>();
+
             CreateMap<Department, DepartmentViewModel>()
                 .ForMember(dest => dest.Parent, opt => opt.Ignore())
                 .ForMember(dest => dest.Children, opt => opt.Ignore());
@@ -30,9 +38,7 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<JobPostLevel, JobPostLevelViewModel>();
             CreateMap<JobPost, JobPostViewModel>();
             CreateMap<AdministrativeLevel, AdministrativeLevelViewModel>();
-            CreateMap<AdministrativePost, AdministrativePostViewModel>();
             CreateMap<TitleLevel, TitleLevelViewModel>();
-            CreateMap<TitlePost, TitlePostViewModel>();
 
             CreateMap<Project, ProjectViewModel>();
             CreateMap<Feature, FeatureViewModel>();
@@ -42,6 +48,7 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<ProductBacklogItemTask, ProductBacklogItemTaskViewModel>();
             CreateMap<BugTask, BugTaskViewModel>();
             CreateMap<ProjectTeamMember, ProjectTeamMemberViewModel>();
+            CreateMap<Category, CategoryViewModel>();
         }
     }
 }

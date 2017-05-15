@@ -116,6 +116,18 @@
     <Compile Include="Migrations\201705090201138_UpdateModels.Designer.cs">
       <DependentUpon>201705090201138_UpdateModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705100831349_AddMail.cs" />
+    <Compile Include="Migrations\201705100831349_AddMail.Designer.cs">
+      <DependentUpon>201705100831349_AddMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705120617369_Update.cs" />
+    <Compile Include="Migrations\201705120617369_Update.Designer.cs">
+      <DependentUpon>201705120617369_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705150758084_RemoveModels.cs" />
+    <Compile Include="Migrations\201705150758084_RemoveModels.Designer.cs">
+      <DependentUpon>201705150758084_RemoveModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -182,6 +194,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705090201138_UpdateModels.resx">
       <DependentUpon>201705090201138_UpdateModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705100831349_AddMail.resx">
+      <DependentUpon>201705100831349_AddMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705120617369_Update.resx">
+      <DependentUpon>201705120617369_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705150758084_RemoveModels.resx">
+      <DependentUpon>201705150758084_RemoveModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
