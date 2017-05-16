@@ -41,6 +41,7 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<AdministrativePost, AdministrativePostViewModel>();
             CreateMap<TitleLevel, TitleLevelViewModel>();
             CreateMap<TitlePost, TitlePostViewModel>();
+            CreateMap<Nationality, NationalityViewModel>();
 
             CreateMap<Project, ProjectViewModel>();
             CreateMap<Feature, FeatureViewModel>();
@@ -50,6 +51,7 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<ProductBacklogItemTask, ProductBacklogItemTaskViewModel>();
             CreateMap<BugTask, BugTaskViewModel>();
             CreateMap<ProjectTeamMember, ProjectTeamMemberViewModel>();
+
             CreateMap<Category, CategoryViewModel>();
         }
     }

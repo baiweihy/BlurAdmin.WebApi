@@ -242,6 +242,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\Bases\SharedController.cs" />
     <Compile Include="Controllers\Core\AccountController.cs" />
+    <Compile Include="Controllers\HumanResources\NationalityController.cs" />
     <Compile Include="Controllers\HumanResources\TitleLevelController.cs" />
     <Compile Include="Controllers\HumanResources\TitlePostController.cs" />
     <Compile Include="Controllers\HumanResources\DepartmentController.cs" />
@@ -254,6 +255,7 @@
     <Compile Include="Controllers\HumanResources\JobPostController.cs" />
     <Compile Include="Controllers\HumanResources\AdministrativeLevelController.cs" />
     <Compile Include="Controllers\HumanResources\JobPostLevelController.cs" />
+    <Compile Include="Controllers\OnlineTraining\CategoryController.cs" />
     <Compile Include="Controllers\Scrum\BugController.cs" />
     <Compile Include="Controllers\Scrum\BugTaskController.cs" />
     <Compile Include="Controllers\Scrum\FeatureController.cs" />
@@ -272,6 +274,10 @@
     <Compile Include="Migrations\201704240614548_RemovePersonNameFromIdentityModel.cs" />
     <Compile Include="Migrations\201704240614548_RemovePersonNameFromIdentityModel.Designer.cs">
       <DependentUpon>201704240614548_RemovePersonNameFromIdentityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705160105199_nationality.cs" />
+    <Compile Include="Migrations\201705160105199_nationality.Designer.cs">
+      <DependentUpon>201705160105199_nationality.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -361,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704240614548_RemovePersonNameFromIdentityModel.resx">
       <DependentUpon>201704240614548_RemovePersonNameFromIdentityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705160105199_nationality.resx">
+      <DependentUpon>201705160105199_nationality.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -49,7 +49,7 @@ namespace LegacyApplication.Database.Context
         public DbSet<AdministrativePost> AdministrativePosts { get; set; }
         public DbSet<TitleLevel> TitleLevels { get; set; }
         public DbSet<TitlePost> TitlePosts { get; set; }
-        public DbSet<Category> Categorys { get; set; }
+        public DbSet<Nationality> Nationalitys { get; set; }
 
         //Scrum
         public DbSet<Project> Projects { get; set; }
@@ -60,5 +60,8 @@ namespace LegacyApplication.Database.Context
         public DbSet<ProductBacklogItemTask> ProductBacklogItemTasks { get; set; }
         public DbSet<Bug> Bugs { get; set; }
         public DbSet<BugTask> BugTasks { get; set; }
+
+        //OnlineTraining
+        public DbSet<Category> Categorys { get; set; }
     }
 }

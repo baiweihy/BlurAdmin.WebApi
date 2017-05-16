@@ -52,6 +52,7 @@ namespace LegacyStandalone.Web.MyConfigurations
             builder.RegisterType<AdministrativePostRepository>().As<IAdministrativePostRepository>().InstancePerRequest();
             builder.RegisterType<TitleLevelRepository>().As<ITitleLevelRepository>().InstancePerRequest();
             builder.RegisterType<TitlePostRepository>().As<ITitlePostRepository>().InstancePerRequest();
+            builder.RegisterType<NationalityRepository>().As<INationalityRepository>().InstancePerRequest();
 
             //Scrum
             builder.RegisterType<BugRepository>().As<IBugRepository>().InstancePerRequest();
@@ -63,6 +64,7 @@ namespace LegacyStandalone.Web.MyConfigurations
             builder.RegisterType<ProjectTeamMemberRepository>().As<IProjectTeamMemberRepository>().InstancePerRequest();
             builder.RegisterType<SprintRepository>().As<ISprintRepository>().InstancePerRequest();
 
+            //OnlineTraining
             builder.RegisterType<CategoryRepository>().As<ICategoryRepository>().InstancePerRequest();
 
             Container = builder.Build();

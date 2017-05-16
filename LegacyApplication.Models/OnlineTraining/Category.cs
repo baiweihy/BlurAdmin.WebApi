@@ -13,7 +13,7 @@ namespace LegacyApplication.Models.OnlineTraining
     {
         public CategoryConfiguration()
         {
-            ToTable("hr.Category");
+            ToTable("ot.Category");
             Property(x => x.Name).IsRequired().HasMaxLength(20);
             Property(x => x.Description).IsRequired().HasMaxLength(500);
         }
