@@ -38,7 +38,6 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<JobPostLevel, JobPostLevelViewModel>();
             CreateMap<JobPost, JobPostViewModel>();
             CreateMap<AdministrativeLevel, AdministrativeLevelViewModel>();
-            CreateMap<AdministrativePost, AdministrativePostViewModel>();
             CreateMap<TitleLevel, TitleLevelViewModel>();
             CreateMap<TitlePost, TitlePostViewModel>();
             CreateMap<Nationality, NationalityViewModel>();

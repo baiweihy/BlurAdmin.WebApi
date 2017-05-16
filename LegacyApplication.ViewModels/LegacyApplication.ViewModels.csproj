@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="HumanResources\NationalityViewModel.cs" />
     <Compile Include="HumanResources\TitleLevelViewModel.cs" />
-    <Compile Include="HumanResources\TitlePostViewModel.cs" />
     <Compile Include="HumanResources\DepartmentViewModel.cs" />
     <Compile Include="Core\RoleViewModel.cs" />
     <Compile Include="Core\UserViewModel.cs" />
@@ -53,7 +52,6 @@
     <Compile Include="HumanResources\EmployeeViewModel.cs" />
     <Compile Include="HumanResources\AdministrativeLevelViewModel.cs" />
     <Compile Include="HumanResources\JobPostLevelViewModel.cs" />
-    <Compile Include="HumanResources\AdministrativePostViewModel.cs" />
     <Compile Include="HumanResources\JobPostViewModel.cs" />
     <Compile Include="OnlineTraining\CategoryViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -50,12 +50,10 @@
   <ItemGroup>
     <Compile Include="HumanResources\Nationality.cs" />
     <Compile Include="HumanResources\TitleLevel.cs" />
-    <Compile Include="HumanResources\TitlePost.cs" />
     <Compile Include="HumanResources\Department.cs" />
     <Compile Include="Core\UploadedFile.cs" />
     <Compile Include="HumanResources\AdministrativeLevel.cs" />
     <Compile Include="HumanResources\Employee.cs" />
-    <Compile Include="HumanResources\AdministrativePost.cs" />
     <Compile Include="HumanResources\JobPost.cs" />
     <Compile Include="HumanResources\JobPostLevel.cs" />
     <Compile Include="OnlineTraining\Category.cs" />

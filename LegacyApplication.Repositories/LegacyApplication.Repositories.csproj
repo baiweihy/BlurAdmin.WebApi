@@ -50,13 +50,11 @@
   <ItemGroup>
     <Compile Include="HumanResources\NationalityRepository.cs" />
     <Compile Include="HumanResources\TitleLevelRepository.cs" />
-    <Compile Include="HumanResources\TitlePostRepository.cs" />
     <Compile Include="HumanResources\DepartmentRepository.cs" />
     <Compile Include="Core\UploadedFileRepository.cs" />
     <Compile Include="HumanResources\EmployeeRepository.cs" />
     <Compile Include="HumanResources\AdministrativeLevelRepository.cs" />
     <Compile Include="HumanResources\JobPostLevelRepository.cs" />
-    <Compile Include="HumanResources\AdministrativePostRepository.cs" />
     <Compile Include="HumanResources\JobPostRepository.cs" />
     <Compile Include="OnlineTraining\CategoryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

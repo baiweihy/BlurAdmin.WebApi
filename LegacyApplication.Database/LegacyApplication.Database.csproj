@@ -124,7 +124,11 @@
     <Compile Include="Migrations\201705120617369_Update.Designer.cs">
       <DependentUpon>201705120617369_Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705160116152_nationality.cs" />
+	    <Compile Include="Migrations\201705150758084_RemoveModels.cs" />
+    <Compile Include="Migrations\201705150758084_RemoveModels.Designer.cs">
+      <DependentUpon>201705150758084_RemoveModels.cs</DependentUpon>
+    </Compile>
+	<Compile Include="Migrations\201705160116152_nationality.cs" />
     <Compile Include="Migrations\201705160116152_nationality.Designer.cs">
       <DependentUpon>201705160116152_nationality.cs</DependentUpon>
     </Compile>
@@ -200,9 +204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705120617369_Update.resx">
       <DependentUpon>201705120617369_Update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705160116152_nationality.resx">
-      <DependentUpon>201705160116152_nationality.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
