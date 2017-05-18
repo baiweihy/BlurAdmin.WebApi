@@ -47,7 +47,6 @@ namespace LegacyApplication.Database.Context
         public DbSet<JobPost> JobPosts { get; set; }
         public DbSet<AdministrativeLevel> AdministrativeLevels { get; set; }
         public DbSet<TitleLevel> TitleLevels { get; set; }
-        public DbSet<TitlePost> TitlePosts { get; set; }
         public DbSet<Nationality> Nationalitys { get; set; }
 
         //Scrum

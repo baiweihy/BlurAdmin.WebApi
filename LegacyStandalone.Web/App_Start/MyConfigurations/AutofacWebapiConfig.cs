@@ -50,8 +50,8 @@ namespace LegacyStandalone.Web.MyConfigurations
             builder.RegisterType<JobPostRepository>().As<IJobPostRepository>().InstancePerRequest();
             builder.RegisterType<AdministrativeLevelRepository>().As<IAdministrativeLevelRepository>().InstancePerRequest();
             builder.RegisterType<TitleLevelRepository>().As<ITitleLevelRepository>().InstancePerRequest();
-            builder.RegisterType<TitlePostRepository>().As<ITitlePostRepository>().InstancePerRequest();
             builder.RegisterType<NationalityRepository>().As<INationalityRepository>().InstancePerRequest();
+            builder.RegisterType<AllowanceLevelRepository>().As<IAllowanceLevelRepository>().InstancePerRequest();
             //Scrum
             builder.RegisterType<BugRepository>().As<IBugRepository>().InstancePerRequest();
             builder.RegisterType<BugTaskRepository>().As<IBugTaskRepository>().InstancePerRequest();

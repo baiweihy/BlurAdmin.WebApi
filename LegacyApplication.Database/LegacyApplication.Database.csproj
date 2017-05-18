@@ -124,13 +124,21 @@
     <Compile Include="Migrations\201705120617369_Update.Designer.cs">
       <DependentUpon>201705120617369_Update.cs</DependentUpon>
     </Compile>
-	    <Compile Include="Migrations\201705150758084_RemoveModels.cs" />
+    <Compile Include="Migrations\201705150758084_RemoveModels.cs" />
     <Compile Include="Migrations\201705150758084_RemoveModels.Designer.cs">
       <DependentUpon>201705150758084_RemoveModels.cs</DependentUpon>
     </Compile>
-	<Compile Include="Migrations\201705160116152_nationality.cs" />
+    <Compile Include="Migrations\201705160116152_nationality.cs" />
     <Compile Include="Migrations\201705160116152_nationality.Designer.cs">
       <DependentUpon>201705160116152_nationality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705180226054_Update1.cs" />
+    <Compile Include="Migrations\201705180226054_Update1.Designer.cs">
+      <DependentUpon>201705180226054_Update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705180712420_addtable.cs" />
+    <Compile Include="Migrations\201705180712420_addtable.Designer.cs">
+      <DependentUpon>201705180712420_addtable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -204,6 +212,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705120617369_Update.resx">
       <DependentUpon>201705120617369_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705150758084_RemoveModels.resx">
+      <DependentUpon>201705150758084_RemoveModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705160116152_nationality.resx">
+      <DependentUpon>201705160116152_nationality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705180226054_Update1.resx">
+      <DependentUpon>201705180226054_Update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705180712420_addtable.resx">
+      <DependentUpon>201705180712420_addtable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

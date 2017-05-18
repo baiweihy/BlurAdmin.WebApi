@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HumanResources\AllowanceLevelViewModel.cs" />
     <Compile Include="HumanResources\NationalityViewModel.cs" />
     <Compile Include="HumanResources\TitleLevelViewModel.cs" />
     <Compile Include="HumanResources\DepartmentViewModel.cs" />
