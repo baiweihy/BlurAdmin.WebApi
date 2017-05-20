@@ -9,7 +9,6 @@ using LegacyApplication.Models.HumanResources;
 using LegacyApplication.Models.Scrum;
 using LegacyApplication.Models.Work;
 using LegacyApplication.Shared.Configurations;
-using LegacyApplication.Models.OnlineTraining;
 
 namespace LegacyApplication.Database.Context
 {
@@ -58,8 +57,6 @@ namespace LegacyApplication.Database.Context
         public DbSet<ProductBacklogItemTask> ProductBacklogItemTasks { get; set; }
         public DbSet<Bug> Bugs { get; set; }
         public DbSet<BugTask> BugTasks { get; set; }
-
-        //OnlineTraining
-        public DbSet<Category> Categorys { get; set; }
+        
     }
 }

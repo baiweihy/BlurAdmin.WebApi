@@ -3,14 +3,12 @@ using LegacyApplication.Models.Core;
 using LegacyApplication.Models.HumanResources;
 using LegacyApplication.Models.Scrum;
 using LegacyApplication.Models.Work;
-using LegacyApplication.Models.OnlineTraining;
 using LegacyApplication.ViewModels.Core;
 using LegacyApplication.ViewModels.HumanResources;
 using LegacyStandalone.Web.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 using LegacyApplication.ViewModels.Scrum;
 using LegacyApplication.ViewModels.Work;
-using LegacyApplication.ViewModels.OnlineTraining;
 
 namespace LegacyStandalone.Web.MyConfigurations.Mapping
 {
@@ -50,8 +48,7 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<ProductBacklogItemTask, ProductBacklogItemTaskViewModel>();
             CreateMap<BugTask, BugTaskViewModel>();
             CreateMap<ProjectTeamMember, ProjectTeamMemberViewModel>();
-
-            CreateMap<Category, CategoryViewModel>();
+            
         }
     }
 }

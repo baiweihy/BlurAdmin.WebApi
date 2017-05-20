@@ -8,7 +8,6 @@ using LegacyApplication.Repositories.Core;
 using LegacyApplication.Repositories.HumanResources;
 using LegacyApplication.Repositories.Scrum;
 using LegacyApplication.Repositories.Work;
-using LegacyApplication.Repositories.OnlineTraining;
 
 namespace LegacyStandalone.Web.MyConfigurations
 {
@@ -61,10 +60,7 @@ namespace LegacyStandalone.Web.MyConfigurations
             builder.RegisterType<ProjectRepository>().As<IProjectRepository>().InstancePerRequest();
             builder.RegisterType<ProjectTeamMemberRepository>().As<IProjectTeamMemberRepository>().InstancePerRequest();
             builder.RegisterType<SprintRepository>().As<ISprintRepository>().InstancePerRequest();
-
-            //OnlineTraining
-            builder.RegisterType<CategoryRepository>().As<ICategoryRepository>().InstancePerRequest();
-
+            
             Container = builder.Build();
 
             return Container;

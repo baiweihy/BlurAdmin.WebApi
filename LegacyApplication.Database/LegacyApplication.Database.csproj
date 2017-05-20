@@ -140,6 +140,10 @@
     <Compile Include="Migrations\201705180712420_addtable.Designer.cs">
       <DependentUpon>201705180712420_addtable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705200100446_RemoveOnlineTraining.cs" />
+    <Compile Include="Migrations\201705200100446_RemoveOnlineTraining.Designer.cs">
+      <DependentUpon>201705200100446_RemoveOnlineTraining.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -224,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705180712420_addtable.resx">
       <DependentUpon>201705180712420_addtable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705200100446_RemoveOnlineTraining.resx">
+      <DependentUpon>201705200100446_RemoveOnlineTraining.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

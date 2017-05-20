@@ -54,7 +54,6 @@
     <Compile Include="HumanResources\AdministrativeLevelViewModel.cs" />
     <Compile Include="HumanResources\JobPostLevelViewModel.cs" />
     <Compile Include="HumanResources\JobPostViewModel.cs" />
-    <Compile Include="OnlineTraining\CategoryViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scrum\BugTaskViewModel.cs" />
     <Compile Include="Scrum\BugViewModel.cs" />
