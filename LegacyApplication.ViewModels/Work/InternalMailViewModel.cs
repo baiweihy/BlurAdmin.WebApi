@@ -15,7 +15,7 @@ namespace LegacyApplication.ViewModels.Work
         public bool HasDeleted { get; set; }
         public MailType MailType { get; set; }
 
-        public virtual ICollection<InternalMailToViewModel> Tos { get; set; }
-        public virtual ICollection<InternalMailAttachmentViewModel> Attachments { get; set; }
+        public List<InternalMailToViewModel> Tos { get; set; }
+        public List<InternalMailAttachmentViewModel> Attachments { get; set; }
     }
 }

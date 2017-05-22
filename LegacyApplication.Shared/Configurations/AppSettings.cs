@@ -3,6 +3,6 @@
     public class AppSettings
     {
         public const string DefaultConnection = "DefaultConnection";
-        public const string UploadDirectory = @"D://Upload";
+        public const string UploadDirectory = @"F://Upload";
     }
 }

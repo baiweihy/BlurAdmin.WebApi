@@ -1,0 +1,61 @@
+﻿<form class="form-horizontal" role="form" name="composeMailForm" novalidate>
+    <div class="form-group" ng-class="{'has-error': vm.mail.tos.length === 0}">
+        <label for="receivers" class="col-sm-1 control-label">收件人</label>
+        <div class="col-sm-11">
+            <ui-select multiple tagging tagging-label="(custom 'new' label)" ng-model="vm.mail.tos" ng-if="vm.persons">
+                <ui-select-match placeholder="请选择收件人 (输入拼音, 汉字以查询)...">{{$item.personName + "(" + $item.departmentName + ")"}}</ui-select-match>
+                <ui-select-choices repeat="person in vm.persons | filter:$select.search">{{person.personName + " (" + person.departmentName +  ")"}}</ui-select-choices>
+            </ui-select>
+        </div>
+    </div>
+    <div class="form-group form-group-sm" ng-class="{'has-error': composeMailForm.subject.$invalid}">
+        <label for="subject" class="col-sm-1 control-label">主题</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="主题" ng-model="vm.mail.subject" maxlength="100" ng-required="true">
+        </div>
+        <div class="col-sm-2">
+            <select class="form-control" name="mailType" ng-model="vm.mail.mailType" ng-options="x.value as x.key for x in vm.mailTypes"></select>
+        </div>
+    </div>
+    <div class="form-group no-margin-bottom">
+        <label for="body" class="col-sm-1 control-label">内容</label>
+        <div class="col-sm-11">
+            <summernote name="body" config="vm.summernoteOptions" lang="zh-CN" ng-model-options="{ debounce: 1000 }" ng-model="vm.mail.body"></summernote>
+        </div>
+    </div>
+    <div class="form-group form-group-sm">
+        <label for="attachment" class="col-sm-1 control-label">附件</label>
+        <div class="col-sm-11">
+            <input type="file" class="form-control" nv-file-select uploader="vm.uploader" multiple="multiple">
+            <ul class="list-group no-margin-bottom" ng-if="vm.uploader.queue.length > 0">
+                <li ng-repeat="item in vm.uploader.queue" ng-class="{'list-group-item': true, 'list-group-item-success':item.isSuccess, 'list-group-item-danger': item.isError}">{{item.file.name}}
+                    <button type="button" class="close pull-right" ng-click="vm.uploader.removeFromQueue(item)">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">删除</span>
+                    </button>
+                    <span class="glyphicon glyphicon-repeat pull-right" aria-hidden="true" ng-show="item.isError" style="cursor: pointer; margin-top: 3px; margin-right: 10px;"
+                    ng-click="vm.uploader.uploadItem(item)"></span>
+                    <div class="progress" ng-show="item.isUploading">
+                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{item.progress}}" aria-valuemin="0"
+                        aria-valuemax="100" ng-style="{'width': item.progress + '%'}">
+                            <span class="sr-only">{{item.progress}}%</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list-group no-margin-bottom" ng-if="vm.originalAttachments.length > 0">
+                <li ng-repeat="item in vm.originalAttachments" ng-class="{'list-group-item': true, 'list-group-item-success':item.isSuccess, 'list-group-item-danger': item.isError}">{{item.file.name}}
+                    <button type="button" class="close pull-right" ng-click="vm.removeFromOriginal(item)">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">删除</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="form-group form-group-sm">
+        <div class="col-sm-offset-1 col-sm-11">
+            <button type="submit" class="btn btn-default btn-sm" ng-click="vm.sendMail()" ng-disabled="vm.uploader.isUploading || composeMailForm.$invalid || vm.mail.tos.length === 0 || vm.isSending">发送<span ng-show="vm.isSending">中...</span></button>
+        </div>
+    </div>
+</form>

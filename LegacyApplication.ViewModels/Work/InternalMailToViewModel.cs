@@ -11,6 +11,5 @@ namespace LegacyApplication.ViewModels.Work
         public bool HasRead { get; set; }
         public DateTime? ReadTime { get; set; }
         public bool HasDeleted { get; set; }
-        public virtual InternalMailViewModel Mail { get; set; }
     }
 }

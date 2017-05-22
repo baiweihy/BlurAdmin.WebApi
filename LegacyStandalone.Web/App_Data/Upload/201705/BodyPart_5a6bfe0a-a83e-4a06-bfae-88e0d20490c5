@@ -1,0 +1,84 @@
+(function () {
+    'use strict';
+
+    angular.module('myApp.admin').controller('MailComposeController', MailComposeController);
+
+    MailComposeController.$inject = ['$state', 'tools', 'FileUploader', 'mailSvc', 'adminTools'];
+
+    function MailComposeController($state, tools, FileUploader, mailSvc, adminTools) {
+        var vm = this;
+        vm.mailTypes = adminTools.enums.mailTypes;
+        var filter = {
+            name: "sizeFilter",
+            fn: function (item) {
+                if (item.size > 31457280) {
+                    tools.toastr.error("文件大小不可以超过30M");
+                    return false;
+                }
+                return true;
+            }
+        };
+        vm.uploader = new FileUploader({
+            url: tools.serverPath + '/api/myupload',
+            autoUpload: true,
+            withCredentials: true,
+            headers: {
+                authorization: tools.getAuthorizationHeader()
+            },
+            filters: [filter],
+            onSuccessItem: function (item, response, status, headers) {
+                item.data = response[0];
+            }
+        });
+        vm.mail = {
+            tos: [],
+            subject: '',
+            body: null,
+            mailType: 0,
+            attachments: []
+        };
+        vm.summernoteOptions = {
+            height: 300
+        };
+        mailSvc.person.query(null, function (data) {
+            data.forEach(x => {
+                if (x.pinYin) {
+                    x.pinyinLower = x.pinYin.toLowerCase()
+                }
+            });
+            vm.persons = data;
+        }, function (res) {
+            tools.toastr.error(tools.getError(res));
+        });
+        vm.sendMail = function () {
+            vm.isSending = true;
+            var tos = [];
+            tos = vm.mail.tos.map(function (to) {
+                return to.userName;
+            });
+            var obj = {
+                subject: vm.mail.subject,
+                body: vm.mail.body,
+                mailType: vm.mail.mailType,
+                tos: tos,
+                attachments: []
+            };
+            angular.forEach(vm.uploader.queue, function (file) {
+                if (file && file.isSuccess && file.data) {
+                    obj.attachments.push(file.data.key);
+                }
+            });
+            mailSvc.crud.save(obj,
+                function (data) {
+                    tools.toastr.success("发送成功！");
+                    $state.go("admin!mail-sent", {
+                        page: 1
+                    });
+                },
+                function (res) {
+                    vm.isSending = true;
+                    tools.toastr.error(tools.getError(res));
+                });
+        };
+    }
+}());

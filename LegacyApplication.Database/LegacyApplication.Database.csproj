@@ -144,6 +144,10 @@
     <Compile Include="Migrations\201705200100446_RemoveOnlineTraining.Designer.cs">
       <DependentUpon>201705200100446_RemoveOnlineTraining.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705221128149_AddPropertiesToEmployee.cs" />
+    <Compile Include="Migrations\201705221128149_AddPropertiesToEmployee.Designer.cs">
+      <DependentUpon>201705221128149_AddPropertiesToEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -231,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705200100446_RemoveOnlineTraining.resx">
       <DependentUpon>201705200100446_RemoveOnlineTraining.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705221128149_AddPropertiesToEmployee.resx">
+      <DependentUpon>201705221128149_AddPropertiesToEmployee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

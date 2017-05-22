@@ -81,7 +81,23 @@ namespace LegacyApplication.ViewModels.HumanResources
         [Display(Name = "岗位ID")]
         public int? JobPostId { get; set; }
 
-        public JobPostViewModel Post { get; set; }
+        [Display(Name = "民族ID")]
+        public int? NationalityId { get; set; }
+
+        [Display(Name = "职称")]
+        [StringLength(100, ErrorMessage = "{0}的长度不可超过{1}")]
+        public string Title { get; set; }
+
+        [Display(Name = "职称级别ID")]
+        public int? TitleLevelId { get; set; }
+
+        [Display(Name = "行政级别ID")]
+        public int? AdministrativeLevelId { get; set; }
+
+        public JobPostViewModel JobPost { get; set; }
         public DepartmentViewModel Department { get; set; }
+        public NationalityViewModel Nationality { get; set; }
+        public TitleLevelViewModel TitleLevel { get; set; }
+        public AdministrativeLevelViewModel AdministrativeLevel { get; set; }
     }
 }

@@ -10,7 +10,5 @@ namespace LegacyApplication.ViewModels.Work
         public string FileName { get; set; }
         public string Path { get; set; }
         public long Size { get; set; }
-
-        public virtual InternalMailViewModel Mail { get; set; }
     }
 }

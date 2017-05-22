@@ -27,9 +27,16 @@ namespace LegacyApplication.Models.HumanResources
         public EducationalBackground EducationalBackground { get; set; }
 
         public int? JobPostId { get; set; }
-        public JobPost Post { get; set; }
+        public int? NationalityId { get; set; }
+        public string Title { get; set; }
+        public int? TitleLevelId { get; set; }
+        public int? AdministrativeLevelId { get; set; }
 
         public Department Department { get; set; }
+        public JobPost JobPost { get; set; }
+        public Nationality Nationality { get; set; }
+        public TitleLevel TitleLevel { get; set; }
+        public AdministrativeLevel AdministrativeLevel { get; set; }
     }
 
     public class EmployeeConfiguraton : EntityBaseConfiguration<Employee>
@@ -49,9 +56,13 @@ namespace LegacyApplication.Models.HumanResources
             Property(x => x.PhoneNumber).HasMaxLength(50);
             Property(x => x.EmailAddress).HasMaxLength(50);
             Property(x => x.Remark).HasMaxLength(500);
+            Property(x => x.Title).HasMaxLength(100);
 
             HasOptional(x => x.Department).WithMany(x => x.Employees).HasForeignKey(x => x.DepartmentId);
-            HasOptional(x => x.Post).WithMany().HasForeignKey(x => x.JobPostId);
+            HasOptional(x => x.JobPost).WithMany().HasForeignKey(x => x.JobPostId);
+            HasOptional(x => x.Nationality).WithMany().HasForeignKey(x => x.NationalityId);
+            HasOptional(x => x.TitleLevel).WithMany().HasForeignKey(x => x.TitleLevelId);
+            HasOptional(x => x.AdministrativeLevel).WithMany().HasForeignKey(x => x.AdministrativeLevelId);
         }
     }
 }

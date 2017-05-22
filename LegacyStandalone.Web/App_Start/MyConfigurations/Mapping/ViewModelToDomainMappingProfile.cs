@@ -24,9 +24,9 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
 
             CreateMap<UploadedFileViewModel, UploadedFile>();
 
-            CreateMap<InternalMail, InternalMailViewModel>();
-            CreateMap<InternalMailTo, InternalMailToViewModel>();
-            CreateMap<InternalMailAttachment, InternalMailAttachmentViewModel>();
+            CreateMap<InternalMailViewModel, InternalMail>();
+            CreateMap<InternalMailToViewModel, InternalMailTo>();
+            CreateMap<InternalMailAttachmentViewModel, InternalMailAttachment>();
 
             CreateMap<DepartmentViewModel, Department>()
                 .ForMember(dest => dest.Parent, opt => opt.Ignore())
@@ -47,7 +47,7 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<ProductBacklogItemTaskViewModel, ProductBacklogItemTask>();
             CreateMap<BugTaskViewModel, BugTask>();
             CreateMap<ProjectTeamMemberViewModel, ProjectTeamMember>();
-            
+
         }
     }
 }
