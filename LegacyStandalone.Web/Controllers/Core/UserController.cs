@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
+using LegacyApplication.Database.Infrastructure;
+using LegacyApplication.Repositories.Core;
 using LegacyApplication.Shared.Features.Pagination;
 using LegacyApplication.ViewModels.Core;
 using LegacyStandalone.Web.Models;
@@ -21,10 +23,13 @@ namespace LegacyStandalone.Web.Controllers.Core
     {
         private ApplicationUserManager _userManager;
         public ApplicationUserManager UserManager => _userManager ?? (_userManager = Request.GetOwinContext().GetUserManager<ApplicationUserManager>());
+        private readonly IUploadedFileRepository _uploadedFileRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public UserController()
+        public UserController(IUploadedFileRepository uploadedFileRepository, IUnitOfWork unitOfWork)
         {
-
+            _uploadedFileRepository = uploadedFileRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public UserController(ApplicationUserManager userManager)
@@ -152,6 +157,24 @@ namespace LegacyStandalone.Web.Controllers.Core
                 return Ok(vm);
             }
             return NotFound();
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("Picture/{userName}")]
+        public async Task<IHttpActionResult> GetFileAsync(string userName)
+        {
+            var user = await UserManager.FindByNameAsync(userName);
+            var fileId = user?.PictureFileId;
+            if (fileId != null)
+            {
+                var model = await _uploadedFileRepository.GetSingleAsync(x => x.Id == fileId);
+                if (model != null)
+                {
+                    return new FileActionResult(model);
+                }
+            }
+            return null;
         }
 
         protected override void Dispose(bool disposing)
