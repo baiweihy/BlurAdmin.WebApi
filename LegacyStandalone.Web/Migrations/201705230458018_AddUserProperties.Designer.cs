@@ -7,13 +7,13 @@ namespace LegacyStandalone.Web.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class nationality : IMigrationMetadata
+    public sealed partial class AddUserProperties : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(nationality));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddUserProperties));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705160105199_nationality"; }
+            get { return "201705230458018_AddUserProperties"; }
         }
         
         string IMigrationMetadata.Source

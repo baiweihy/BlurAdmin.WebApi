@@ -1,4 +1,4 @@
-﻿namespace LegacyApplication.Shared.Enums
+﻿namespace LegacyApplication.Shared.Features.Base
 {
     public enum Status
     {

@@ -98,9 +98,15 @@ namespace LegacyStandalone.Web.Providers
                 .Aggregate("", (previous, current) => (string.IsNullOrEmpty(previous) ? "" : (previous + ",")) + current);
             IDictionary<string, string> data = new Dictionary<string, string>
             {
-                { "userName", user.UserName },
-                { "roles",  roleIds},
-                {"userId", user.Id }
+                {"userName", user.UserName },
+                {"roles",  roleIds},
+                {"userId", user.Id },
+                {"firstName", user.FirstName },
+                {"lastName", user.LastName },
+                {"occupation", user.Occupation },
+                {"email", user.Email },
+                {"phoneNumber", user.PhoneNumber },
+                {"pictureFileId", user.PictureFileId == null? "": user.PictureFileId.ToString() }
             };
             return new AuthenticationProperties(data);
         }

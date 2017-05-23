@@ -1,5 +1,4 @@
 ﻿using System;
-using LegacyApplication.Shared.Enums;
 
 namespace LegacyApplication.Shared.Features.Base
 {

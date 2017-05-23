@@ -79,6 +79,28 @@ namespace LegacyStandalone.Web.Controllers.Core
             return BadRequest(ModelState);
         }
 
+        public async Task<IHttpActionResult> Put(string id, [FromBody] UserViewModel vm)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await UserManager.FindByNameAsync(vm.UserName);
+                if (user == null)
+                {
+                    return NotFound();
+                }
+                user.FirstName = vm.FirstName;
+                user.LastName = vm.LastName;
+                user.Email = vm.Email;
+                user.Occupation = vm.Occupation;
+                user.PhoneNumber = vm.PhoneNumber;
+                user.PictureFileId = vm.PictureFileId;
+                await UserManager.UpdateAsync(user);
+                vm = Mapper.Map<ApplicationUser, UserViewModel>(user);
+                return Ok(vm);
+            }
+            return BadRequest(ModelState);
+        }
+
         public async Task<IHttpActionResult> Delete(string id)
         {
             var item = await UserManager.FindByIdAsync(id);
@@ -119,6 +141,18 @@ namespace LegacyStandalone.Web.Controllers.Core
             return Ok();
         }
 
+        [HttpGet]
+        [Route("Current")]
+        public async Task<IHttpActionResult> GetCurrent()
+        {
+            var user = await UserManager.FindByNameAsync(User.Identity.Name);
+            if (user != null)
+            {
+                var vm = Mapper.Map<ApplicationUser, UserViewModel>(user);
+                return Ok(vm);
+            }
+            return NotFound();
+        }
 
         protected override void Dispose(bool disposing)
         {

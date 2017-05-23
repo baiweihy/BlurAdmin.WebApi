@@ -275,9 +275,9 @@
     <Compile Include="Migrations\201704240614548_RemovePersonNameFromIdentityModel.Designer.cs">
       <DependentUpon>201704240614548_RemovePersonNameFromIdentityModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705160105199_nationality.cs" />
-    <Compile Include="Migrations\201705160105199_nationality.Designer.cs">
-      <DependentUpon>201705160105199_nationality.cs</DependentUpon>
+    <Compile Include="Migrations\201705230458018_AddUserProperties.cs" />
+    <Compile Include="Migrations\201705230458018_AddUserProperties.Designer.cs">
+      <DependentUpon>201705230458018_AddUserProperties.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -368,8 +368,8 @@
     <EmbeddedResource Include="Migrations\201704240614548_RemovePersonNameFromIdentityModel.resx">
       <DependentUpon>201704240614548_RemovePersonNameFromIdentityModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705160105199_nationality.resx">
-      <DependentUpon>201705160105199_nationality.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705230458018_AddUserProperties.resx">
+      <DependentUpon>201705230458018_AddUserProperties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

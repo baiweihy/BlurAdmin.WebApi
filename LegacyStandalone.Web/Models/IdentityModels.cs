@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using LegacyApplication.Shared.Configurations;
 using Microsoft.AspNet.Identity;
@@ -16,6 +17,18 @@ namespace LegacyStandalone.Web.Models
             // Add custom user claims here
             return userIdentity;
         }
+        
+        [MaxLength(50)]
+        public string FirstName { get; set; }
+        
+        [MaxLength(50)]
+        public string LastName { get; set; }
+
+        [Display(Name = "职业")]
+        [MaxLength(100, ErrorMessage = "{0}的长度不可以超过{1}")]
+        public string Occupation { get; set; }
+
+        public int? PictureFileId { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
