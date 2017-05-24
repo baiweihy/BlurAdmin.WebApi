@@ -14,6 +14,7 @@ namespace LegacyApplication.ViewModels.Work
         public DateTime SendTime { get; set; }
         public bool HasDeleted { get; set; }
         public MailType MailType { get; set; }
+        public string MailTypeDisplay => MailType.ToString();
 
         public List<InternalMailToViewModel> Tos { get; set; }
         public List<InternalMailAttachmentViewModel> Attachments { get; set; }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -11,15 +12,18 @@ using LegacyApplication.Models.HumanResources;
 using LegacyApplication.Models.Work;
 using LegacyApplication.Repositories.HumanResources;
 using LegacyApplication.Repositories.Work;
+using LegacyApplication.Shared.ByModule.Work.Enums;
+using LegacyApplication.Shared.Features.Pagination;
 using LegacyApplication.ViewModels.Core;
 using LegacyApplication.ViewModels.HumanResources;
 using LegacyApplication.ViewModels.Work;
 using LegacyStandalone.Web.Controllers.Bases;
+using LegacyStandalone.Web.Models;
 using Newtonsoft.Json.Linq;
 
 namespace LegacyStandalone.Web.Controllers.Work
 {
-    [System.Web.Mvc.RoutePrefix("api/InternalMail")]
+    [RoutePrefix("api/InternalMail")]
     public class InternalMailController : ApiControllerBase
     {
         private readonly IInternalMailRepository _internalMailRepository;
@@ -29,6 +33,22 @@ namespace LegacyStandalone.Web.Controllers.Work
             IDepartmentRepository departmentRepository) : base(unitOfWork, departmentRepository)
         {
             _internalMailRepository = internalMailRepository;
+        }
+
+        [Route("Inbox/{pageIndex}/{pageSize}/{mailType?}")]
+        public async Task<PaginatedItemsViewModel<InternalMailViewModel>> GetByPage(int pageIndex, int pageSize, MailType? mailType = null)
+        {
+            var exp = _internalMailRepository.AllIncluding(x => x.Tos, x => x.Attachments).Where(x => x.Tos.Any(y => y.UserName == UserName));
+            if (mailType != null)
+            {
+                exp = exp.Where(x => x.MailType == mailType);
+            }
+            var items = await exp.OrderByDescending(x => x.Id)
+                .Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
+            var count = await exp.CountAsync();
+            var vms = Mapper.Map<IEnumerable<InternalMail>, List<InternalMailViewModel>>(items);
+            var result = new PaginatedItemsViewModel<InternalMailViewModel>(pageIndex, pageSize, count, vms);
+            return result;
         }
 
         public async Task<IHttpActionResult> GetOne(int id)
