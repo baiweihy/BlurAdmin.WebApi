@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HumanResources\AllowanceLevelViewModel.cs" />
     <Compile Include="HumanResources\NationalityViewModel.cs" />
     <Compile Include="HumanResources\TitleLevelViewModel.cs" />
     <Compile Include="HumanResources\DepartmentViewModel.cs" />
@@ -63,6 +62,8 @@
     <Compile Include="Scrum\ProjectTeamMemberViewModel.cs" />
     <Compile Include="Scrum\ProjectViewModel.cs" />
     <Compile Include="Scrum\SprintViewModel.cs" />
+    <Compile Include="Work\SentMailViewModel.cs" />
+    <Compile Include="Work\InboxMailViewModel.cs" />
     <Compile Include="Work\InternalMailViewModel.cs" />
     <Compile Include="Work\InternalMailAttachmentViewModel.cs" />
     <Compile Include="Work\InternalMailToViewModel.cs" />

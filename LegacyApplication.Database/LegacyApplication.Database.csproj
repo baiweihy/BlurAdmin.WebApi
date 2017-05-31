@@ -148,6 +148,10 @@
     <Compile Include="Migrations\201705221128149_AddPropertiesToEmployee.Designer.cs">
       <DependentUpon>201705221128149_AddPropertiesToEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705310551537_RemoveAllowance.cs" />
+    <Compile Include="Migrations\201705310551537_RemoveAllowance.Designer.cs">
+      <DependentUpon>201705310551537_RemoveAllowance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -238,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705221128149_AddPropertiesToEmployee.resx">
       <DependentUpon>201705221128149_AddPropertiesToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705310551537_RemoveAllowance.resx">
+      <DependentUpon>201705310551537_RemoveAllowance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

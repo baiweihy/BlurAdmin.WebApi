@@ -243,7 +243,6 @@
     <Compile Include="Controllers\Bases\SharedController.cs" />
     <Compile Include="Controllers\Core\AccountController.cs" />
     <Compile Include="Controllers\Core\UploadedFileController.cs" />
-    <Compile Include="Controllers\HumanResources\AllowanceLevelController.cs" />
     <Compile Include="Controllers\HumanResources\NationalityController.cs" />
     <Compile Include="Controllers\HumanResources\TitleLevelController.cs" />
     <Compile Include="Controllers\HumanResources\DepartmentController.cs" />

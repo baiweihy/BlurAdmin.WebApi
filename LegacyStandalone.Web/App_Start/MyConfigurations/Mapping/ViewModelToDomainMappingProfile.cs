@@ -37,7 +37,6 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<AdministrativeLevelViewModel, AdministrativeLevel>();
             CreateMap<TitleLevelViewModel, TitleLevel>();
             CreateMap<NationalityViewModel, Nationality>();
-            CreateMap<AllowanceLevelViewModel, AllowanceLevel>();
 
             CreateMap<ProjectViewModel, Project>();
             CreateMap<FeatureViewModel, Feature>();
