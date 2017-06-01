@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /LegacyStandalone.Web/App_Data/Upload/201705
+/LegacyStandalone.Web/App_Data/Upload/201706

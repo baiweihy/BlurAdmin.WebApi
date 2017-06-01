@@ -101,11 +101,11 @@ namespace LegacyStandalone.Web.Providers
                 {"userName", user.UserName },
                 {"roles",  roleIds},
                 {"userId", user.Id },
-                {"firstName", user.FirstName },
-                {"lastName", user.LastName },
-                {"occupation", user.Occupation },
-                {"email", user.Email },
-                {"phoneNumber", user.PhoneNumber },
+                {"firstName", user.FirstName ?? "" },
+                {"lastName", user.LastName ?? "" },
+                {"occupation", user.Occupation ?? "" },
+                {"email", user.Email ?? "" },
+                {"phoneNumber", user.PhoneNumber ?? "" },
                 {"pictureFileId", user.PictureFileId == null? "": user.PictureFileId.ToString() }
             };
             return new AuthenticationProperties(data);
