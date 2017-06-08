@@ -2,13 +2,11 @@
 using AutoMapper;
 using LegacyApplication.Models.Core;
 using LegacyApplication.Models.HumanResources;
-using LegacyApplication.Models.Scrum;
 using LegacyApplication.Models.Work;
 using LegacyApplication.ViewModels.Core;
 using LegacyApplication.ViewModels.HumanResources;
 using LegacyStandalone.Web.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
-using LegacyApplication.ViewModels.Scrum;
 using LegacyApplication.ViewModels.Work;
 
 namespace LegacyStandalone.Web.MyConfigurations.Mapping
@@ -45,16 +43,7 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<AdministrativeLevel, AdministrativeLevelViewModel>();
             CreateMap<TitleLevel, TitleLevelViewModel>();
             CreateMap<Nationality, NationalityViewModel>();
-
-            CreateMap<Project, ProjectViewModel>();
-            CreateMap<Feature, FeatureViewModel>();
-            CreateMap<Sprint, SprintViewModel>();
-            CreateMap<ProductBacklogItem, ProductBacklogItemViewModel>();
-            CreateMap<Bug, BugViewModel>();
-            CreateMap<ProductBacklogItemTask, ProductBacklogItemTaskViewModel>();
-            CreateMap<BugTask, BugTaskViewModel>();
-            CreateMap<ProjectTeamMember, ProjectTeamMemberViewModel>();
-
+            
         }
     }
 }

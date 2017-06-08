@@ -54,14 +54,6 @@
     <Compile Include="HumanResources\JobPostLevelViewModel.cs" />
     <Compile Include="HumanResources\JobPostViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scrum\BugTaskViewModel.cs" />
-    <Compile Include="Scrum\BugViewModel.cs" />
-    <Compile Include="Scrum\FeatureViewModel.cs" />
-    <Compile Include="Scrum\ProductBacklogItemTaskViewModel.cs" />
-    <Compile Include="Scrum\ProductBacklogItemViewModel.cs" />
-    <Compile Include="Scrum\ProjectTeamMemberViewModel.cs" />
-    <Compile Include="Scrum\ProjectViewModel.cs" />
-    <Compile Include="Scrum\SprintViewModel.cs" />
     <Compile Include="Work\SentMailViewModel.cs" />
     <Compile Include="Work\InboxMailViewModel.cs" />
     <Compile Include="Work\InternalMailViewModel.cs" />

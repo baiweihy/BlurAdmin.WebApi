@@ -254,14 +254,6 @@
     <Compile Include="Controllers\HumanResources\JobPostController.cs" />
     <Compile Include="Controllers\HumanResources\AdministrativeLevelController.cs" />
     <Compile Include="Controllers\HumanResources\JobPostLevelController.cs" />
-    <Compile Include="Controllers\Scrum\BugController.cs" />
-    <Compile Include="Controllers\Scrum\BugTaskController.cs" />
-    <Compile Include="Controllers\Scrum\FeatureController.cs" />
-    <Compile Include="Controllers\Scrum\ProductBacklogItemController.cs" />
-    <Compile Include="Controllers\Scrum\ProductBacklogItemTaskController.cs" />
-    <Compile Include="Controllers\Scrum\ProjectController.cs" />
-    <Compile Include="Controllers\Scrum\ProjectTeamMemberController.cs" />
-    <Compile Include="Controllers\Scrum\SprintController.cs" />
     <Compile Include="Controllers\Work\InternalMailController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

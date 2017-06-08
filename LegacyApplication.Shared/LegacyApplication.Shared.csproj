@@ -59,13 +59,6 @@
     <Compile Include="ByModule\HumanResources\Enums\EducationNature.cs" />
     <Compile Include="ByModule\HumanResources\Enums\AdministrativePostNature.cs" />
     <Compile Include="ByModule\HumanResources\Enums\PostNature.cs" />
-    <Compile Include="ByModule\Scrum\Enums\BugSeverity.cs" />
-    <Compile Include="ByModule\Scrum\Enums\BugStatus.cs" />
-    <Compile Include="ByModule\Scrum\Enums\BugTaskStatus.cs" />
-    <Compile Include="ByModule\Scrum\Enums\FeatureStatus.cs" />
-    <Compile Include="ByModule\Scrum\Enums\ProductBacklogItemStatus.cs" />
-    <Compile Include="ByModule\Scrum\Enums\ProductBacklogItemTaskStatus.cs" />
-    <Compile Include="ByModule\Scrum\Enums\SprintStatus.cs" />
     <Compile Include="ByModule\Work\Enums\MailType.cs" />
     <Compile Include="Features\Order\IOrder.cs" />
     <Compile Include="Features\Tree\TreeEntityBase.cs" />

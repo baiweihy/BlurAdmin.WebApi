@@ -152,6 +152,10 @@
     <Compile Include="Migrations\201705310551537_RemoveAllowance.Designer.cs">
       <DependentUpon>201705310551537_RemoveAllowance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706081104373_RemoveScrum.cs" />
+    <Compile Include="Migrations\201706081104373_RemoveScrum.Designer.cs">
+      <DependentUpon>201706081104373_RemoveScrum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -245,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705310551537_RemoveAllowance.resx">
       <DependentUpon>201705310551537_RemoveAllowance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706081104373_RemoveScrum.resx">
+      <DependentUpon>201706081104373_RemoveScrum.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
