@@ -32,6 +32,7 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
                 .ForMember(dest => dest.ToCount, opt => opt.MapFrom(ori => ori.Tos.Count))
                 .ForMember(dest => dest.AnyoneRead, opt => opt.MapFrom(ori => ori.Tos.Any(y => y.HasRead)))
                 .ForMember(dest => dest.AllRead, opt => opt.MapFrom(ori => ori.Tos.All(y => y.HasRead)));
+            CreateMap<Todo, TodoViewModel>();
 
             CreateMap<Department, DepartmentViewModel>()
                 .ForMember(dest => dest.Parent, opt => opt.Ignore())

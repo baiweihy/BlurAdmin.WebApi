@@ -59,6 +59,7 @@
     <Compile Include="Work\InternalMailViewModel.cs" />
     <Compile Include="Work\InternalMailAttachmentViewModel.cs" />
     <Compile Include="Work\InternalMailToViewModel.cs" />
+    <Compile Include="Work\TodoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LegacyApplication.Shared\LegacyApplication.Shared.csproj">
