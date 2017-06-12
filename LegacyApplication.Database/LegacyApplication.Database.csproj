@@ -164,6 +164,10 @@
     <Compile Include="Migrations\201706110050183_AddDeletedToTodo.Designer.cs">
       <DependentUpon>201706110050183_AddDeletedToTodo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706120126263_AddSchedule.cs" />
+    <Compile Include="Migrations\201706120126263_AddSchedule.Designer.cs">
+      <DependentUpon>201706120126263_AddSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -266,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706110050183_AddDeletedToTodo.resx">
       <DependentUpon>201706110050183_AddDeletedToTodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706120126263_AddSchedule.resx">
+      <DependentUpon>201706120126263_AddSchedule.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

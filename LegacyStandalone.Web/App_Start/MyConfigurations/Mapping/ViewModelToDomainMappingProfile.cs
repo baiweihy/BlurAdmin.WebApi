@@ -26,6 +26,7 @@ namespace LegacyStandalone.Web.MyConfigurations.Mapping
             CreateMap<InternalMailToViewModel, InternalMailTo>();
             CreateMap<InternalMailAttachmentViewModel, InternalMailAttachment>();
             CreateMap<TodoViewModel, Todo>();
+            CreateMap<ScheduleViewModel, Schedule>();
 
             CreateMap<DepartmentViewModel, Department>()
                 .ForMember(dest => dest.Parent, opt => opt.Ignore())

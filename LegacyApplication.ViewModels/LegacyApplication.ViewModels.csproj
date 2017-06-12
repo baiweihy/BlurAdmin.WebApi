@@ -54,6 +54,7 @@
     <Compile Include="HumanResources\JobPostLevelViewModel.cs" />
     <Compile Include="HumanResources\JobPostViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Work\ScheduleViewModel.cs" />
     <Compile Include="Work\SentMailViewModel.cs" />
     <Compile Include="Work\InboxMailViewModel.cs" />
     <Compile Include="Work\InternalMailViewModel.cs" />

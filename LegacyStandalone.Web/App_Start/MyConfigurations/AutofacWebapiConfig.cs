@@ -41,6 +41,7 @@ namespace LegacyStandalone.Web.MyConfigurations
             builder.RegisterType<InternalMailToRepository>().As<IInternalMailToRepository>().InstancePerRequest();
             builder.RegisterType<InternalMailAttachmentRepository>().As<IInternalMailAttachmentRepository>().InstancePerRequest();
             builder.RegisterType<TodoRepository>().As<ITodoRepository>().InstancePerRequest();
+            builder.RegisterType<ScheduleRepository>().As<IScheduleRepository>().InstancePerRequest();
 
             //HR
             builder.RegisterType<DepartmentRepository>().As<IDepartmentRepository>().InstancePerRequest();

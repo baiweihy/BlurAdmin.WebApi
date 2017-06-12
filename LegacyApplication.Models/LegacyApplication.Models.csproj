@@ -60,6 +60,7 @@
     <Compile Include="Work\InternalMail.cs" />
     <Compile Include="Work\InternalMailAttachment.cs" />
     <Compile Include="Work\InternalMailTo.cs" />
+    <Compile Include="Work\Schedule.cs" />
     <Compile Include="Work\Todo.cs" />
   </ItemGroup>
   <ItemGroup>

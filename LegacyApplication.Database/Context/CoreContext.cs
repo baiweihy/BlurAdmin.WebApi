@@ -38,6 +38,7 @@ namespace LegacyApplication.Database.Context
         public DbSet<InternalMailTo> InternalMailTos { get; set; }
         public DbSet<InternalMailAttachment> InternalMailAttachments { get; set; }
         public DbSet<Todo> Todos { get; set; }
+        public DbSet<Schedule> Schedules { get; set; }
 
         //HR
         public DbSet<Department> Departments { get; set; }

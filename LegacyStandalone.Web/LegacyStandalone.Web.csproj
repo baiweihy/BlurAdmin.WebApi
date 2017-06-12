@@ -256,6 +256,7 @@
     <Compile Include="Controllers\HumanResources\AdministrativeLevelController.cs" />
     <Compile Include="Controllers\HumanResources\JobPostLevelController.cs" />
     <Compile Include="Controllers\Work\InternalMailController.cs" />
+    <Compile Include="Controllers\Work\ScheduleController.cs" />
     <Compile Include="Controllers\Work\TodoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
