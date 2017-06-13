@@ -90,19 +90,19 @@ namespace LegacyStandalone.Web.Controllers.Work
             return Ok();
         }
 
-        [Route("ByMonth")]
+        [Route("ByRange")]
         [HttpGet]
-        public async Task<IEnumerable<ScheduleViewModel>> GetByMonth(DateTime start, DateTime end)
+        public async Task<IEnumerable<ScheduleViewModel>> GetByRange(DateTime start, DateTime? end = null)
         {
-            end = end.AddDays(1);
+            var endTime = end?.AddDays(1) ?? start.AddMonths(2);
             var models = await _scheduleRepository.All.Where(x => x.UserName == UserName &&
-                ((x.Start <= start && x.End >= start) 
-                || (x.Start >= start && x.End < end) 
-                || (x.Start < end && x.End >= end) 
-                || (x.Start <= start && x.End >= end))).ToListAsync();
+                ((x.Start <= start && x.End >= start)
+                || (x.Start >= start && x.End < endTime)
+                || (x.Start < endTime && x.End >= endTime)
+                || (x.Start <= start && x.End >= endTime))).OrderBy(x => x.Start).ToListAsync();
             var viewModels = Mapper.Map<IEnumerable<Schedule>, IEnumerable<ScheduleViewModel>>(models);
             return viewModels;
         }
-        
+
     }
 }
