@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyStandalone.Web", "LegacyStandalone.Web\LegacyStandalone.Web.csproj", "{1269F494-5C50-43B9-8A71-E732F965DF95}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyApplication.Shared", "LegacyApplication.Shared\LegacyApplication.Shared.csproj", "{D8252922-85B7-4BF0-93CF-F777B7A8A0EA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyApplication.ViewModels", "LegacyApplication.ViewModels\LegacyApplication.ViewModels.csproj", "{9C0DCE47-88ED-4A0C-A658-3AF0AD57D84D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyApplication.States", "LegacyApplication.States\LegacyApplication.States.csproj", "{ED62591C-E10A-4A44-84B3-43BB0E3541E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{9C0DCE47-88ED-4A0C-A658-3AF0AD57D84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C0DCE47-88ED-4A0C-A658-3AF0AD57D84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C0DCE47-88ED-4A0C-A658-3AF0AD57D84D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED62591C-E10A-4A44-84B3-43BB0E3541E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED62591C-E10A-4A44-84B3-43BB0E3541E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED62591C-E10A-4A44-84B3-43BB0E3541E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED62591C-E10A-4A44-84B3-43BB0E3541E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
