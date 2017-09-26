@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ED62591C-E10A-4A44-84B3-43BB0E3541E7}</ProjectGuid>
+    <ProjectGuid>{A29A2F22-4605-4AC3-92CB-8C52ABD693A1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LegacyApplication.States</RootNamespace>
-    <AssemblyName>LegacyApplication.States</AssemblyName>
+    <RootNamespace>LegacyApplication.Services</RootNamespace>
+    <AssemblyName>LegacyApplication.Services</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,10 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Stateless, Version=4.0.0.0, Culture=neutral, PublicKeyToken=93038f0927583c9a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Stateless.4.0.0-dev-00244\lib\net45\Stateless.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,10 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HumanResources\NewEmployee\NewEmployeeApplication.cs" />
+    <Compile Include="Core\CommonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Work\InternalMailService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LegacyApplication.Database\LegacyApplication.Database.csproj">
+      <Project>{2cc6c674-8ac2-473a-928e-9144bfa41342}</Project>
+      <Name>LegacyApplication.Database</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LegacyApplication.Models\LegacyApplication.Models.csproj">
       <Project>{2ffba5f5-3af3-49d1-b5d7-2afc5aef4606}</Project>
       <Name>LegacyApplication.Models</Name>
@@ -60,12 +68,9 @@
       <Project>{d8252922-85b7-4bf0-93cf-f777b7a8a0ea}</Project>
       <Name>LegacyApplication.Shared</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LegacyApplication.ViewModels\LegacyApplication.ViewModels.csproj">
-      <Project>{9c0dce47-88ed-4a0c-a658-3af0ad57d84d}</Project>
-      <Name>LegacyApplication.ViewModels</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

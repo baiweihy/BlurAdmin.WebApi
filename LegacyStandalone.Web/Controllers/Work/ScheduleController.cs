@@ -12,6 +12,7 @@ using LegacyApplication.Repositories.Work;
 using LegacyApplication.ViewModels.Work;
 using LegacyStandalone.Web.Controllers.Bases;
 using Newtonsoft.Json.Linq;
+using LegacyApplication.Services.Core;
 
 namespace LegacyStandalone.Web.Controllers.Work
 {
@@ -21,8 +22,8 @@ namespace LegacyStandalone.Web.Controllers.Work
         private readonly IScheduleRepository _scheduleRepository;
         public ScheduleController(
             IScheduleRepository scheduleRepository,
-            IUnitOfWork unitOfWork,
-            IDepartmentRepository departmentRepository) : base(unitOfWork, departmentRepository)
+            ICommonService commonService,
+            IUnitOfWork unitOfWork) : base(commonService, unitOfWork)
         {
             _scheduleRepository = scheduleRepository;
         }

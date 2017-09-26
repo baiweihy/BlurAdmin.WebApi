@@ -11,6 +11,7 @@ using LegacyApplication.Repositories.Work;
 using LegacyApplication.ViewModels.Work;
 using LegacyStandalone.Web.Controllers.Bases;
 using Newtonsoft.Json.Linq;
+using LegacyApplication.Services.Core;
 
 namespace LegacyStandalone.Web.Controllers.Work
 {
@@ -20,8 +21,8 @@ namespace LegacyStandalone.Web.Controllers.Work
         private readonly ITodoRepository _todoRepository;
         public TodoController(
             ITodoRepository todoRepository,
-            IUnitOfWork unitOfWork,
-            IDepartmentRepository departmentRepository) : base(unitOfWork, departmentRepository)
+            ICommonService commonService,
+            IUnitOfWork unitOfWork) : base(commonService, unitOfWork)
         {
             _todoRepository = todoRepository;
         }

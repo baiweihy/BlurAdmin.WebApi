@@ -11,6 +11,7 @@ using LegacyApplication.Database.Infrastructure;
 using LegacyApplication.Repositories.Core;
 using LegacyApplication.Shared.Features.Pagination;
 using LegacyApplication.ViewModels.Core;
+using LegacyStandalone.Web.Controllers.Bases;
 using LegacyStandalone.Web.Models;
 using Microsoft.AspNet.Identity.Owin;
 using Newtonsoft.Json.Linq;

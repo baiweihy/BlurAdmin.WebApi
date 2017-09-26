@@ -8,6 +8,7 @@ using LegacyApplication.Models.HumanResources;
 using LegacyApplication.Repositories.HumanResources;
 using LegacyApplication.ViewModels.HumanResources;
 using LegacyStandalone.Web.Controllers.Bases;
+using LegacyApplication.Services.Core;
 
 namespace LegacyStandalone.Web.Controllers.HumanResources
 {
@@ -17,8 +18,8 @@ namespace LegacyStandalone.Web.Controllers.HumanResources
         private readonly ITitleLevelRepository _titleLevelRepository;
         public TitleLevelController(
             ITitleLevelRepository titleLevelRepository,
-            IUnitOfWork unitOfWork, 
-            IDepartmentRepository departmentRepository) : base(unitOfWork, departmentRepository)
+            ICommonService commonService,
+            IUnitOfWork unitOfWork) : base(commonService, unitOfWork)
         {
             _titleLevelRepository = titleLevelRepository;
         }

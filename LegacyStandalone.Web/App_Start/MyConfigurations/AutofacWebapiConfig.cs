@@ -7,6 +7,8 @@ using LegacyApplication.Database.Infrastructure;
 using LegacyApplication.Repositories.Core;
 using LegacyApplication.Repositories.HumanResources;
 using LegacyApplication.Repositories.Work;
+using LegacyApplication.Services.Core;
+using LegacyApplication.Services.Work;
 
 namespace LegacyStandalone.Web.MyConfigurations
 {
@@ -32,7 +34,11 @@ namespace LegacyStandalone.Web.MyConfigurations
             //       .InstancePerRequest();
 
             builder.RegisterType<CoreContext>().As<IUnitOfWork>().InstancePerRequest();
-            
+
+            //Services
+            builder.RegisterType<CommonService>().As<ICommonService>().InstancePerRequest();
+            builder.RegisterType<InternalMailService>().As<IInternalMailService>().InstancePerRequest();
+
             //Core
             builder.RegisterType<UploadedFileRepository>().As<IUploadedFileRepository>().InstancePerRequest();
 

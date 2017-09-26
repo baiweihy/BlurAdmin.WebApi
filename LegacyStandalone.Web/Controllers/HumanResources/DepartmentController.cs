@@ -10,14 +10,16 @@ using LegacyApplication.Repositories.HumanResources;
 using LegacyApplication.Shared.Features.Tree;
 using LegacyApplication.ViewModels.HumanResources;
 using LegacyStandalone.Web.Controllers.Bases;
+using LegacyApplication.Services.Core;
 
 namespace LegacyStandalone.Web.Controllers.HumanResources
 {
     [RoutePrefix("api/Department")]
     public class DepartmentController : ApiControllerBase
     {
-        public DepartmentController(IUnitOfWork unitOfWork, IDepartmentRepository departmentRepository)
-            : base(unitOfWork, departmentRepository)
+        public DepartmentController(
+            ICommonService commonService,
+            IUnitOfWork unitOfWork) : base(commonService, unitOfWork)
         {
         }
 

@@ -10,6 +10,7 @@ using LegacyApplication.Repositories.HumanResources;
 using LegacyApplication.Shared.Features.Pagination;
 using LegacyApplication.ViewModels.HumanResources;
 using LegacyStandalone.Web.Controllers.Bases;
+using LegacyApplication.Services.Core;
 
 namespace LegacyStandalone.Web.Controllers.HumanResources
 {
@@ -20,8 +21,8 @@ namespace LegacyStandalone.Web.Controllers.HumanResources
 
         public EmployeeController(
             IEmployeeRepository employeeRepository,
-            IUnitOfWork unitOfWork,
-            IDepartmentRepository departmentRepository) : base(unitOfWork, departmentRepository)
+            ICommonService commonService,
+            IUnitOfWork unitOfWork) : base(commonService, unitOfWork)
         {
             _employeeRepository = employeeRepository;
         }

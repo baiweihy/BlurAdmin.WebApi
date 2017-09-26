@@ -14,6 +14,7 @@ using LegacyApplication.ViewModels.Core;
 using LegacyApplication.ViewModels.Work;
 using LegacyStandalone.Web.Controllers.Bases;
 using Newtonsoft.Json.Linq;
+using LegacyApplication.Services.Core;
 
 namespace LegacyStandalone.Web.Controllers.Work
 {
@@ -26,8 +27,8 @@ namespace LegacyStandalone.Web.Controllers.Work
         public InternalMailController(
             IInternalMailRepository internalMailRepository,
             IInternalMailToRepository internalMailToRepository,
-            IUnitOfWork unitOfWork,
-            IDepartmentRepository departmentRepository) : base(unitOfWork, departmentRepository)
+            ICommonService commonService,
+            IUnitOfWork unitOfWork) : base(commonService, unitOfWork)
         {
             _internalMailRepository = internalMailRepository;
             _internalMailToRepository = internalMailToRepository;
@@ -207,6 +208,18 @@ namespace LegacyStandalone.Web.Controllers.Work
             }
             await UnitOfWork.SaveChangesAsync();
             return Ok();
+        }
+
+        [Route("TrashBox/{pageIndex}/{pageSize}")]
+        public async Task<PaginatedItemsViewModel<InternalMailViewModel>> GetTrashBox(int pageIndex, int pageSize)
+        {
+            var exp = _internalMailRepository.AllIncluding(x => x.Tos, x => x.Attachments).Where(x => (x.UserName == UserName && x.HasDeleted) || x.Tos.Any(y => y.UserName == UserName && y.HasDeleted));
+            var items = await exp.OrderByDescending(x => x.Id)
+                .Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
+            var count = await exp.CountAsync();
+            var vms = Mapper.Map<IEnumerable<InternalMail>, List<InternalMailViewModel>>(items);
+            var result = new PaginatedItemsViewModel<InternalMailViewModel>(pageIndex, pageSize, count, vms);
+            return result;
         }
 
         public async Task<IHttpActionResult> Post(JObject obj)

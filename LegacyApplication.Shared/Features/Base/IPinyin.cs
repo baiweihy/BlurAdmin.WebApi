@@ -1,8 +1,7 @@
 ﻿namespace LegacyApplication.Shared.Features.Base
 {
-    public enum Status
+    public interface IPinyin
     {
-        停用 = 0,
-        正常 = 1
+        string Pinyin { get; set; }
     }
 }
